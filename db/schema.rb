@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_30_175932) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_04_183541) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_30_175932) do
     t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "total_price"
+    t.integer "number_of_guests"
+    t.boolean "captain_needed", default: false
     t.index ["user_id"], name: "index_bookings_on_user_id"
     t.index ["yacht_id"], name: "index_bookings_on_yacht_id"
   end
@@ -57,6 +60,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_30_175932) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_available", default: true
+    t.boolean "has_captain", default: false
+    t.integer "capacity"
     t.index ["user_id"], name: "index_yachts_on_user_id"
   end
 
