@@ -288,3 +288,30 @@
   puts "Yacht #{azure.id} is created"
 
   puts "#{Yacht.count} yachts successfully created!"
+
+  booking1 = Booking.create!(
+      user: yachtk,
+      boat: azure,
+      status: "booked"
+      total_price: 8000.00,
+      start_date: DateTime.strptime("08/12/2024 11:00", "%m/%d/%Y %H:%M"),
+      end_date: DateTime.strptime("15/12/2024 17:00", "%m/%d/%Y %H:%M"),
+    )
+
+    booking2 = Booking.create!(
+      user: captainw,
+      boat: elegance,
+      status: "available"
+      total_price: 6000.00,
+      start_date: DateTime.strptime("08/12/2024 11:00", "%m/%d/%Y %H:%M"),
+      end_date: DateTime.strptime("15/12/2024 17:00", "%m/%d/%Y %H:%M"),
+    )
+
+    booking3 = Booking.create!(
+      user: richw,
+      boat: paradise,
+      status: "booked"
+      total_price: 10000.00,
+      start_date: DateTime.strptime("08/12/2024 11:00", "%m/%d/%Y %H:%M"),
+      end_date: DateTime.strptime("15/12/2024 17:00", "%m/%d/%Y %H:%M"),
+    )
