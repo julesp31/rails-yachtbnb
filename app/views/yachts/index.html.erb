@@ -1,2 +1,14 @@
-<h1>Yachts#index</h1>
-<p>Find me in app/views/yachts/index.html.erb</p>
+<section class="yachts">
+  <div class="container-fluid">
+    <h3><%= @yachts.count %> Yachts</h3>
+    <div class="cards">
+      <div class="cards_grid">
+        <% @yachts.each do |yacht| %>
+          <div class="grid-item">
+            <img src="<%= yacht.image_url %>" alt="Yacht Image">
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

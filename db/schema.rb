@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_04_183541) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_05_185108) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -48,6 +48,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_04_183541) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -63,6 +64,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_04_183541) do
     t.boolean "is_available", default: true
     t.boolean "has_captain", default: false
     t.integer "capacity"
+    t.string "image_url"
     t.index ["user_id"], name: "index_yachts_on_user_id"
   end
 
