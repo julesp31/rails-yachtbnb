@@ -10,3 +10,64 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.container-fluid {
+  width: 100%;
+  max-width: 3000px;
+  margin: 0 auto;
+  border: solid 3px black;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  padding: 0px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr; /* 3 columns */
+  grid-auto-rows: 1fr; /* Each row will be sized automatically */
+  grid-gap: 16px;
+  border-radius: 5px;
+}
+
+/* Ensure each card maintains a square aspect ratio */
+.cards > * {
+  aspect-ratio: 1; /* Ensures each card is square */
+  align-items: center;
+  justify-content: center;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

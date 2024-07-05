@@ -8,6 +8,7 @@
   # MovieGenre.find_or_create_by!(name: genre_name)
 # end
 require 'date'
+require "open-uri"
 
 puts "Purging database..."
 
@@ -119,7 +120,8 @@ elysium = Yacht.create!(
     location: "Monaco, France",
     is_available: true,
     has_captain: false,
-    capacity: 4
+    capacity: 4,
+    photo:
   )
   puts "Yacht #{elysium.id} is created"
 
@@ -131,7 +133,8 @@ aphrodite = Yacht.create!(
     location: "Cannes, France",
     is_available: true,
     has_captain: true,
-    capacity: 8
+    capacity: 8,
+    photo:
   )
   puts "Yacht #{aphrodite.id} is created"
 
@@ -143,7 +146,8 @@ serenity = Yacht.create!(
     location: "Portofino, Italy",
     is_available: true,
     has_captain: true,
-    capacity: 6
+    capacity: 6,
+    photo:
   )
   puts "Yacht #{serenity.id} is created"
 
@@ -155,7 +159,8 @@ poseidon = Yacht.create!(
     location: "Ibiza, Spain",
     is_available: true,
     has_captain: false,
-    capacity: 5
+    capacity: 5,
+    photo:
   )
   puts "Yacht #{poseidon.id} is created"
 
@@ -167,7 +172,8 @@ odyssey = Yacht.create!(
     location: "Santorini, Greece",
     is_available: true,
     has_captain: true,
-    capacity: 7
+    capacity: 7,
+    photo:
   )
   puts "Yacht #{odyssey.id} is created"
 
@@ -179,7 +185,8 @@ nautilus = Yacht.create!(
     location: "Miami, USA",
     is_available: true,
     has_captain: false,
-    capacity: 5
+    capacity: 5,
+    photo:
   )
   puts "Yacht #{nautilus.id} is created"
 
@@ -191,7 +198,8 @@ titan = Yacht.create!(
     location: "Dubai, UAE",
     is_available: true,
     has_captain: true,
-    capacity: 15
+    capacity: 15,
+    photo:
   )
   puts "Yacht #{titan.id} is created"
 
@@ -203,7 +211,8 @@ atlantis = Yacht.create!(
     location: "Sydney, Australia",
     is_available: true,
     has_captain: true,
-    capacity: 12
+    capacity: 12,
+    photo:
   )
   puts "Yacht #{atlantis.id} is created"
 
@@ -215,7 +224,8 @@ neptune = Yacht.create!(
     location: "Malibu, USA",
     is_available: true,
     has_captain: false,
-    capacity: 8
+    capacity: 8,
+    photo:
   )
   puts "Yacht #{neptune.id} is created"
 
@@ -227,7 +237,8 @@ aurora = Yacht.create!(
     location: "Amalfi Coast, Italy",
     is_available: true,
     has_captain: false,
-    capacity: 6
+    capacity: 6,
+    photo:
   )
   puts "Yacht #{aurora.id} is created"
 
@@ -239,7 +250,8 @@ amethyst = Yacht.create!(
     location: "Saint-Tropez, France",
     is_available: true,
     has_captain: true,
-    capacity: 8
+    capacity: 8,
+    photo:
   )
 
 stella = Yacht.create!(
@@ -250,7 +262,8 @@ stella = Yacht.create!(
     location: "Dubrovnik, Croatia",
     is_available: true,
     has_captain: false,
-    capacity: 9
+    capacity: 9,
+    photo:
   )
 
 celestial = Yacht.create!(
@@ -261,7 +274,8 @@ celestial = Yacht.create!(
     location: "Mykonos, Greece",
     is_available: true,
     has_captain: true,
-    capacity: 14
+    capacity: 14,
+    photo:
   )
   puts "Yacht #{celestial.id} is created"
 
@@ -273,7 +287,8 @@ galactic = Yacht.create!(
     location: "St. Barts, Caribbean",
     is_available: true,
     has_captain: true,
-    capacity: 12
+    capacity: 12,
+    photo:
   )
   puts "Yacht #{galactic.id} is created"
 
@@ -285,7 +300,8 @@ sovereign = Yacht.create!(
     location: "Capri, Italy",
     is_available: true,
     has_captain: false,
-    capacity: 11
+    capacity: 11,
+    photo:
   )
   puts "Yacht #{sovereign.id} is created"
 
@@ -297,7 +313,8 @@ majesty = Yacht.create!(
     location: "Nice, France",
     is_available: true,
     has_captain: false,
-    capacity: 10
+    capacity: 10,
+    photo:
   )
   puts "Yacht #{majesty.id} is created"
 
@@ -309,7 +326,8 @@ paradise = Yacht.create!(
     location: "Miami, USA",
     is_available: true,
     has_captain: true,
-    capacity: 9
+    capacity: 9,
+    photo:
   )
   puts "Yacht #{paradise.id} is created"
 
@@ -321,7 +339,8 @@ elegance = Yacht.create!(
     location: "Monaco",
     is_available: true,
     has_captain: false,
-    capacity: 6
+    capacity: 6,
+    photo:
   )
   puts "Yacht #{elegance.id} is created"
 
@@ -333,7 +352,8 @@ horizon = Yacht.create!(
     location: "Dubai, UAE",
     is_available: true,
     has_captain: true,
-    capacity: 16
+    capacity: 16,
+    photo:
   )
   puts "Yacht #{horizon.id} is created"
 
@@ -345,7 +365,8 @@ azure = Yacht.create!(
     location: "Cannes, France",
     is_available: true,
     has_captain: false,
-    capacity: 9
+    capacity: 9,
+    photo:
   )
   puts "Yacht #{azure.id} is created"
 
