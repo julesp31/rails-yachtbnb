@@ -4,24 +4,28 @@
       <div class="col-md-8">
         <div class="card">
           <div class="card-body">
-            <h2 class="card-title"><%= @yacht.name %></h2>
+            <h1 class="card-title-show"><%= @yacht.name %></h1>
             <div class="card-photo">
               <% if @yacht.photo.attached? %>
-                <%= image_tag @yacht.photo, class: 'img-fluid' %>
+                <%= image_tag @yacht.photo, class: 'img-fluid yacht-photo' %>
               <% else %>
-                <%= image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid' %>
+                <%= image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid yacht-photo' %>
               <% end %>
             </div>
             <br>
-            <p class="card-text"><%= @yacht.description %></p>
-            <p class="card-text">Price: £<%= number_to_human(@yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
-            <p class="card-text">Location: <%= @yacht.location %></p>
-            <p class="card-text">Available: <%= @yacht.is_available ? 'Yes' : 'No' %></p>
-            <p class="card-text">Captain Included: <%= @yacht.has_captain ? 'Yes' : 'No' %></p>
-            <p class="card-text">Capacity: <%= @yacht.capacity %> guests</p>
+            <p class="card-text text-muted"><%= @yacht.description %></p>
+            <p class="card-text"><strong>Price:</strong> £<%= number_to_human(@yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
+            <p class="card-text"><strong>Location:</strong> <%= @yacht.location %></p>
+            <p class="card-text"><strong>Available:</strong> <%= @yacht.is_available ? 'Yes' : 'No' %></p>
+            <p class="card-text"><strong>Captain Included:</strong> <%= @yacht.has_captain ? 'Yes' : 'No' %></p>
+            <p class="card-text"><strong>Capacity:</strong> <%= @yacht.capacity %> guests</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+
+</style>
