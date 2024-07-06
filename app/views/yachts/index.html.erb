@@ -1,6 +1,6 @@
 <section class="yachts">
   <div class="container-fluid">
-    <h3><%= @yachts.count %> Yachts available</h3>
+    <h2 class="yacht-count"><%= @yachts.count %> Yachts available</h2>
     <div class="cards">
       <div class="cards_grid">
         <% @yachts.each do |yacht| %>
@@ -14,6 +14,7 @@
                   <%= image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid' %>
                 <% end %>
               </div>
+              <br>
               <p class="card-text"><%= yacht.description %></p>
               <p class="card-text">Price: £<%= number_to_human(yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
               <p class="card-text">Location: <%= yacht.location %></p>
