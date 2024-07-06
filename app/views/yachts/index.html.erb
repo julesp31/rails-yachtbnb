@@ -6,12 +6,18 @@
         <% @yachts.each do |yacht| %>
           <div class="grid-item card">
             <div class="card-body">
-              <h3 class="card-title"><%= yacht.name %></h3>
+              <%= link_to yacht_path(yacht) do %>
+                <h3 class="card-title"><%= yacht.name %></h3>
+                <% end %>
               <div class="card-photo">
                 <% if yacht.photo.attached? %>
-                  <%= image_tag yacht.photo, class: 'img-fluid' %>
+                  <%= link_to yacht_path(yacht) do %>
+                    <%= image_tag yacht.photo, class: 'img-fluid' %>
+                  <% end %>
                 <% else %>
-                  <%= image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid' %>
+                  <%= link_to yacht_path(yacht) do %>
+                    <%= image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid' %>
+                  <% end %>
                 <% end %>
               </div>
               <br>
