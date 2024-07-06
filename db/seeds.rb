@@ -8,6 +8,7 @@
   # MovieGenre.find_or_create_by!(name: genre_name)
 # end
 require 'date'
+require "open-uri"
 
 puts "Purging database..."
 
@@ -17,6 +18,14 @@ Yacht.destroy_all
 User.destroy_all
 
 puts "Creating users..."
+
+User.create!(
+    email: 'test@test.com',
+    first_name: 'Test',
+    last_name: 'Test',
+    password: '123456',
+    password_confirmation: '123456'
+  )
 
 yachtk = User.create!(
     email: 'yachtking@billionairesclub.com',
@@ -119,7 +128,8 @@ elysium = Yacht.create!(
     location: "Monaco, France",
     is_available: true,
     has_captain: false,
-    capacity: 4
+    capacity: 4,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{elysium.id} is created"
 
@@ -131,7 +141,8 @@ aphrodite = Yacht.create!(
     location: "Cannes, France",
     is_available: true,
     has_captain: true,
-    capacity: 8
+    capacity: 8,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{aphrodite.id} is created"
 
@@ -143,7 +154,8 @@ serenity = Yacht.create!(
     location: "Portofino, Italy",
     is_available: true,
     has_captain: true,
-    capacity: 6
+    capacity: 6,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{serenity.id} is created"
 
@@ -155,7 +167,8 @@ poseidon = Yacht.create!(
     location: "Ibiza, Spain",
     is_available: true,
     has_captain: false,
-    capacity: 5
+    capacity: 5,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{poseidon.id} is created"
 
@@ -167,7 +180,8 @@ odyssey = Yacht.create!(
     location: "Santorini, Greece",
     is_available: true,
     has_captain: true,
-    capacity: 7
+    capacity: 7,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{odyssey.id} is created"
 
@@ -179,7 +193,8 @@ nautilus = Yacht.create!(
     location: "Miami, USA",
     is_available: true,
     has_captain: false,
-    capacity: 5
+    capacity: 5,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{nautilus.id} is created"
 
@@ -191,7 +206,8 @@ titan = Yacht.create!(
     location: "Dubai, UAE",
     is_available: true,
     has_captain: true,
-    capacity: 15
+    capacity: 15,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{titan.id} is created"
 
@@ -203,7 +219,8 @@ atlantis = Yacht.create!(
     location: "Sydney, Australia",
     is_available: true,
     has_captain: true,
-    capacity: 12
+    capacity: 12,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{atlantis.id} is created"
 
@@ -215,7 +232,8 @@ neptune = Yacht.create!(
     location: "Malibu, USA",
     is_available: true,
     has_captain: false,
-    capacity: 8
+    capacity: 8,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{neptune.id} is created"
 
@@ -227,7 +245,8 @@ aurora = Yacht.create!(
     location: "Amalfi Coast, Italy",
     is_available: true,
     has_captain: false,
-    capacity: 6
+    capacity: 6,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{aurora.id} is created"
 
@@ -239,7 +258,8 @@ amethyst = Yacht.create!(
     location: "Saint-Tropez, France",
     is_available: true,
     has_captain: true,
-    capacity: 8
+    capacity: 8,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
 
 stella = Yacht.create!(
@@ -250,7 +270,8 @@ stella = Yacht.create!(
     location: "Dubrovnik, Croatia",
     is_available: true,
     has_captain: false,
-    capacity: 9
+    capacity: 9,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
 
 celestial = Yacht.create!(
@@ -261,7 +282,8 @@ celestial = Yacht.create!(
     location: "Mykonos, Greece",
     is_available: true,
     has_captain: true,
-    capacity: 14
+    capacity: 14,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{celestial.id} is created"
 
@@ -273,7 +295,8 @@ galactic = Yacht.create!(
     location: "St. Barts, Caribbean",
     is_available: true,
     has_captain: true,
-    capacity: 12
+    capacity: 12,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{galactic.id} is created"
 
@@ -285,7 +308,8 @@ sovereign = Yacht.create!(
     location: "Capri, Italy",
     is_available: true,
     has_captain: false,
-    capacity: 11
+    capacity: 11,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{sovereign.id} is created"
 
@@ -297,7 +321,8 @@ majesty = Yacht.create!(
     location: "Nice, France",
     is_available: true,
     has_captain: false,
-    capacity: 10
+    capacity: 10,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{majesty.id} is created"
 
@@ -309,7 +334,8 @@ paradise = Yacht.create!(
     location: "Miami, USA",
     is_available: true,
     has_captain: true,
-    capacity: 9
+    capacity: 9,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{paradise.id} is created"
 
@@ -321,7 +347,8 @@ elegance = Yacht.create!(
     location: "Monaco",
     is_available: true,
     has_captain: false,
-    capacity: 6
+    capacity: 6,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{elegance.id} is created"
 
@@ -333,7 +360,8 @@ horizon = Yacht.create!(
     location: "Dubai, UAE",
     is_available: true,
     has_captain: true,
-    capacity: 16
+    capacity: 16,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{horizon.id} is created"
 
@@ -345,7 +373,8 @@ azure = Yacht.create!(
     location: "Cannes, France",
     is_available: true,
     has_captain: false,
-    capacity: 9
+    capacity: 9,
+    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
   )
   puts "Yacht #{azure.id} is created"
 
