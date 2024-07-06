@@ -481,3 +481,5 @@ booking3 = Booking.create!(
   puts "Booking #{booking3.id} is created"
 
   puts "#{Booking.count} bookings successfully created!"
+
+  
