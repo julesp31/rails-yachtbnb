@@ -39,8 +39,17 @@
   margin: 20px 0;
 }
 
-.sub-banner {
+.image-banner1 {
+  background: url(https://wallpapercave.com/wp/wp3410929.jpg) no-repeat center center/cover;
+}
+.image-banner2 {
   background: url('https://luxurylaunches.com/wp-content/uploads/2015/12/Kometa-at-dawn-1.jpg') no-repeat center center/cover;
+}
+.image-banner3 {
+background: url(https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.jpg) no-repeat center center/cover;
+}
+
+.sub-banner {
   width: 30%;
   height: 30vh;
   display: flex;
@@ -67,6 +76,10 @@
     }
 
     h2 {
+      color: white;
+    }
+
+    p {
       color: white;
     }
   }
