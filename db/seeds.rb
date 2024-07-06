@@ -422,7 +422,7 @@ horizon = Yacht.new(
     horizon.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     horizon.save!
 
-  puts "Yacht #{horizon.id} is created"
+    puts "Yacht #{horizon.id} is created"
 
 azure = Yacht.new(
     user: sailings,
