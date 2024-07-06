@@ -22,19 +22,38 @@
   padding: 0px;
 }
 
-.cards {
+.cards_grid {
   display: grid;
-  grid-template-columns: 1fr; /* 3 columns */
-  grid-auto-rows: 1fr; /* Each row will be sized automatically */
-  grid-gap: 16px;
-  border-radius: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-/* Ensure each card maintains a square aspect ratio */
-.cards > * {
-  aspect-ratio: 1; /* Ensures each card is square */
-  align-items: center;
-  justify-content: center;
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.card-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
 }
 
 // Smallest device
