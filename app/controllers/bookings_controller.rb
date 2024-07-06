@@ -7,11 +7,11 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  def create
+  def new
     @booking = Booking.new
   end
 
-  def new
+  def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     if @booking.save
@@ -27,5 +27,3 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:yacht_id, :status, :start_date, :end_date)
   end
 end
-
-

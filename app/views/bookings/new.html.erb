@@ -1,18 +1,37 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1 class="text-center">Book your Yacht</h1>
+      <%= form_for @booking, html: { class: 'form-horizontal' } do |f| %>
+        <%= f.hidden_field :yacht_id, value: @yacht %>
 
-<%= form_for @booking do |f| %>
-  <%= f.label :yacht_id %>
-  <%= f.text_field :yacht_id %>
+        <div class="form-group row">
+          <%= f.label :start_date, class: 'col-sm-3 col-form-label' %>
+          <div class="col-sm-9">
+            <%= f.date_field :start_date, class: 'form-control' %>
+          </div>
+        </div>
 
-  <%= f.label :status %>
-  <%= f.text_field :status%>
+        <div class="form-group row">
+          <%= f.label :end_date, class: 'col-sm-3 col-form-label' %>
+          <div class="col-sm-9">
+            <%= f.date_field :end_date, class: 'form-control' %>
+          </div>
+        </div>
 
-  <%= f.label :start_date%>
-  <%= f.date_field :start_date %>
+        <div class="form-group row">
+          <%= f.label :status, class: 'col-sm-3 col-form-label' %>
+          <div class="col-sm-9">
+            <%= f.text_field :status, class: 'form-control' %>
+          </div>
+        </div>
 
-  <%= f.label :end_date%>
-  <%= f.date_field :end_date %>
-
-  <%= f.submit 'Book Now' %>
-<% end %>
+        <div class="form-group row">
+          <div class="col-sm-9 offset-sm-3">
+            <%= f.submit 'Book Now', class: 'btn btn-primary' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
