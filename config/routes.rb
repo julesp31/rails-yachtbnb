@@ -1,18 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/index'
-  get 'users/show'
-  get 'reviews/index'
-  get 'reviews/show'
-  get 'reviews/create'
-  get 'reviews/new'
-  get 'bookings/index'
-  get 'bookings/show'
-  get 'bookings/create'
-  get 'bookings/new'
-  get 'yachts/index'
-  get 'yachts/show'
-  get 'yachts/new'
-  get 'yachts/create'
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -42,5 +28,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
 
   # what if i want the route to be yacht#home?
+
+  resources :bforms, only: [:new, :create]
 
 end

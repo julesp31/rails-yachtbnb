@@ -27,3 +27,5 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:yacht_id, :status, :start_date, :end_date)
   end
 end
+
+
