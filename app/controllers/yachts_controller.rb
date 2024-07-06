@@ -7,7 +7,6 @@ class YachtsController < ApplicationController
     @yacht = Yacht.find(params[:id])
   end
 
-
   def new
     @yacht = Yacht.new
   end
