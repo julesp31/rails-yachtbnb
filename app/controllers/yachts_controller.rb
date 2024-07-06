@@ -7,6 +7,7 @@ class YachtsController < ApplicationController
     @yacht = Yacht.find(params[:id])
   end
 
+
   def new
     @yacht = Yacht.new
   end
@@ -24,6 +25,6 @@ class YachtsController < ApplicationController
   private
 
   def yacht_params
-    params.require(:yacht).permit(:name, :description, :price, :location)
+    params.require(:yacht).permit(:name, :description, :price, :location, :is_available, :has_captain, :capacity, :photo)
   end
 end

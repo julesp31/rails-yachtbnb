@@ -1,2 +1,29 @@
-<h1>Yachts#index</h1>
-<p>Find me in app/views/yachts/index.html.erb</p>
+<section class="yachts">
+  <div class="container-fluid">
+    <h3><%= @yachts.count %> Yachts available</h3>
+    <div class="cards">
+      <div class="cards_grid">
+        <% @yachts.each do |yacht| %>
+          <div class="grid-item card">
+            <div class="card-body">
+              <h3 class="card-title"><%= yacht.name %></h3>
+              <div class="card-photo">
+                <% if yacht.photo.attached? %>
+                  <%= image_tag yacht.photo, class: 'img-fluid' %>
+                <% else %>
+                  <%= image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid' %>
+                <% end %>
+              </div>
+              <p class="card-text"><%= yacht.description %></p>
+              <p class="card-text">Price: £<%= number_to_human(yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
+              <p class="card-text">Location: <%= yacht.location %></p>
+              <p class="card-text">Available: <%= yacht.is_available ? 'Yes' : 'No' %></p>
+              <p class="card-text">Captain Included: <%= yacht.has_captain ? 'Yes' : 'No' %></p>
+              <p class="card-text">Capacity: <%= yacht.capacity %> guests</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
