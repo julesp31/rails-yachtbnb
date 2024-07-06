@@ -120,7 +120,7 @@ puts "#{User.count} users successfully created!"
 
 puts "Creating yachts..."
 
-elysium = Yacht.create!(
+elysium = Yacht.new(
     user: yachtk,
     name: "Elysium",
     description: "Elysium is a majestic 150-foot superyacht featuring a sleek modern design. With five luxurious cabins, a spacious sundeck, and state-of-the-art amenities, it offers the ultimate in comfort and elegance. Ideal for both relaxation and entertainment, Elysium includes a jacuzzi, a home theater, and a private beach club.",
@@ -128,12 +128,15 @@ elysium = Yacht.create!(
     location: "Monaco, France",
     is_available: true,
     has_captain: false,
-    capacity: 4,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-2112980112-612x612_jhzttw.jpg"
+    capacity: 4
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-2112980112-612x612_jhzttw.jpg")
+    elysium.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    elysium.save!
+
   puts "Yacht #{elysium.id} is created"
 
-aphrodite = Yacht.create!(
+aphrodite = Yacht.new(
     user: yachtk,
     name: "Aphrodite",
     description: "Aphrodite is a stunning 200-foot yacht designed for those who appreciate the finer things in life. With opulent interiors, an expansive master suite, and four guest cabins, this yacht ensures an unforgettable experience. Enjoy alfresco dining, a fully-equipped gym, and panoramic views from the sky lounge.",
@@ -141,12 +144,15 @@ aphrodite = Yacht.create!(
     location: "Cannes, France",
     is_available: true,
     has_captain: true,
-    capacity: 8,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg"
+    capacity: 8
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg")
+    aphrodite.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    aphrodite.save!
+
   puts "Yacht #{aphrodite.id} is created"
 
-serenity = Yacht.create!(
+serenity = Yacht.new(
     user: captainw,
     name: "Serenity",
     description: "Serenity is a 180-foot masterpiece that combines classic elegance with modern technology. It boasts six spacious cabins, a luxurious salon, and an onboard spa. The yacht also features a large pool, a sun deck with a bar, and a gourmet kitchen, making it perfect for entertaining guests.",
@@ -154,12 +160,15 @@ serenity = Yacht.create!(
     location: "Portofino, Italy",
     is_available: true,
     has_captain: true,
-    capacity: 6,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1970569182-612x612_stahvt.jpg"
+    capacity: 6
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1970569182-612x612_stahvt.jpg")
+    serenity.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    serenity.save!
+
   puts "Yacht #{serenity.id} is created"
 
-poseidon = Yacht.create!(
+poseidon = Yacht.new(
     user: captainw,
     name: "Poseidon",
     description: "Poseidon is a 170-foot luxury yacht that offers an unparalleled blend of performance and comfort. With five elegant cabins, a spacious main deck, and a stylish sun deck, this yacht is designed for relaxation and adventure. It includes water sports equipment, a jacuzzi, and an outdoor cinema.",
@@ -167,12 +176,15 @@ poseidon = Yacht.create!(
     location: "Ibiza, Spain",
     is_available: true,
     has_captain: false,
-    capacity: 5,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208140/istockphoto-1457146775-612x612_jcyqvs.jpg"
+    capacity: 5
   )
+  file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208140/istockphoto-1457146775-612x612_jcyqvs.jpg")
+    poseidon.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    poseidon.save!
+
   puts "Yacht #{poseidon.id} is created"
 
-odyssey = Yacht.create!(
+odyssey = Yacht.new(
     user: seas,
     name: "Odyssey",
     description: "Odyssey is a 190-foot superyacht that epitomizes luxury and sophistication. Featuring six beautifully appointed cabins, a large beach club, and a state-of-the-art entertainment system, Odyssey offers an exceptional yachting experience. Additional amenities include a wellness center, an infinity pool, and a helipad.",
@@ -180,12 +192,15 @@ odyssey = Yacht.create!(
     location: "Santorini, Greece",
     is_available: true,
     has_captain: true,
-    capacity: 7,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208137/istockphoto-471402693-612x612_yh6jmm.jpg"
+    capacity: 7
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208137/istockphoto-471402693-612x612_yh6jmm.jpg")
+    odyssey.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    odyssey.save!
+
   puts "Yacht #{odyssey.id} is created"
 
-nautilus = Yacht.create!(
+nautilus = Yacht.new(
     user: seas,
     name: "Nautilus",
     description: "Nautilus is a 160-foot marvel that perfectly blends performance with luxury. It offers five beautifully designed cabins, a gourmet kitchen, and a spacious sundeck with a bar. Nautilus also features a sauna, a private cinema, and a helipad for seamless travel.",
@@ -193,12 +208,15 @@ nautilus = Yacht.create!(
     location: "Miami, USA",
     is_available: true,
     has_captain: false,
-    capacity: 5,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208139/istockphoto-1001643196-612x612_nkbmck.jpg"
+    capacity: 5
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208139/istockphoto-1001643196-612x612_nkbmck.jpg")
+    nautilus.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    nautilus.save!
+
   puts "Yacht #{nautilus.id} is created"
 
-titan = Yacht.create!(
+titan = Yacht.new(
     user: yachtym,
     name: "Titan",
     description: "Titan is a 220-foot yacht that exudes grandeur and elegance. It boasts a magnificent master suite, six guest cabins, and a large dining area. Additional amenities include a spa, a gym, a swimming pool, and a submarine for underwater exploration.",
@@ -206,12 +224,15 @@ titan = Yacht.create!(
     location: "Dubai, UAE",
     is_available: true,
     has_captain: true,
-    capacity: 15,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208138/istockphoto-671476056-612x612_oid4hd.jpg"
+    capacity: 15
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208138/istockphoto-671476056-612x612_oid4hd.jpg")
+    titan.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    titan.save!
+
   puts "Yacht #{titan.id} is created"
 
-atlantis = Yacht.create!(
+atlantis = Yacht.new(
     user: yachtym,
     name: "Atlantis",
     description: "Atlantis is a 210-foot superyacht known for its sleek design and luxurious interiors. It features seven staterooms, a beach club, and an infinity pool. The yacht also has a fully-equipped gym, a sauna, and a state-of-the-art entertainment system.",
@@ -219,12 +240,15 @@ atlantis = Yacht.create!(
     location: "Sydney, Australia",
     is_available: true,
     has_captain: true,
-    capacity: 12,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208135/istockphoto-182778425-612x612_djkqnt.jpg"
+    capacity: 12
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208135/istockphoto-182778425-612x612_djkqnt.jpg")
+    atlantis.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    atlantis.save!
+
   puts "Yacht #{atlantis.id} is created"
 
-neptune = Yacht.create!(
+neptune = Yacht.new(
     user: richw,
     name: "Neptune",
     description: "Neptune is a 180-foot yacht that offers an unmatched level of luxury and comfort. It includes six opulent cabins, a sun deck with a hot tub, and a lavish main salon. The yacht also comes with a range of water toys and a private cinema.",
@@ -232,12 +256,15 @@ neptune = Yacht.create!(
     location: "Malibu, USA",
     is_available: true,
     has_captain: false,
-    capacity: 8,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208136/istockphoto-470159082-612x612_mek1ih.jpg"
+    capacity: 8
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208136/istockphoto-470159082-612x612_mek1ih.jpg")
+    neptune.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    neptune.save!
+
   puts "Yacht #{neptune.id} is created"
 
-aurora = Yacht.create!(
+aurora = Yacht.new(
     user: richw,
     name: "Aurora",
     description: "Aurora is a 170-foot yacht that combines classic elegance with modern amenities. It features five spacious cabins, a large salon, and a sun deck with a jacuzzi. Aurora also offers a fitness center, a home theater, and a fully-stocked bar.",
@@ -245,12 +272,15 @@ aurora = Yacht.create!(
     location: "Amalfi Coast, Italy",
     is_available: true,
     has_captain: false,
-    capacity: 6,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208136/istockphoto-467026215-612x612_cnxy1q.jpg"
+    capacity: 6
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208136/istockphoto-467026215-612x612_cnxy1q.jpg")
+    aurora.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    aurora.save!
+
   puts "Yacht #{aurora.id} is created"
 
-amethyst = Yacht.create!(
+amethyst = Yacht.new(
     user: luxuryl,
     name: "Amethyst",
     description: "Amethyst is a 180-foot luxury yacht known for its sophisticated design and exceptional amenities. It features six beautifully appointed cabins, a spacious sun deck, and a gourmet dining area. Amethyst also includes a spa, a gym, and a state-of-the-art entertainment system.",
@@ -258,11 +288,15 @@ amethyst = Yacht.create!(
     location: "Saint-Tropez, France",
     is_available: true,
     has_captain: true,
-    capacity: 8,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208137/istockphoto-503692962-612x612_kwwboi.jpg"
+    capacity: 8
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208137/istockphoto-503692962-612x612_kwwboi.jpg")
+    amethyst.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    amethyst.save!
 
-stella = Yacht.create!(
+  puts "Yacht #{amethyst.id} is created"
+
+stella = Yacht.new(
     user: luxuryl,
     name: "Stella",
     description: "Stella is a 195-foot superyacht that epitomizes luxury and sophistication. With six exquisitely designed cabins, a spacious sun deck, and a state-of-the-art entertainment system, Stella Maris offers an unparalleled yachting experience. Additional amenities include a spa, a gym, and a helipad.",
@@ -270,11 +304,15 @@ stella = Yacht.create!(
     location: "Dubrovnik, Croatia",
     is_available: true,
     has_captain: false,
-    capacity: 9,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208137/istockphoto-471402693-612x612_yh6jmm.jpg"
+    capacity: 9
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208137/istockphoto-471402693-612x612_yh6jmm.jpg")
+    stella.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    stella.save!
 
-celestial = Yacht.create!(
+    puts "Yacht #{stella.id} is created"
+
+celestial = Yacht.new(
     user: goldeng,
     name: "Celestial",
     description: "Celestial is a 200-foot masterpiece designed for those who desire the ultimate yachting experience. It offers seven luxurious cabins, a large swimming pool, and a sky lounge. Additional features include a wellness center, a helipad, and a state-of-the-art sound system.",
@@ -282,12 +320,15 @@ celestial = Yacht.create!(
     location: "Mykonos, Greece",
     is_available: true,
     has_captain: true,
-    capacity: 14,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208141/istockphoto-1814651998-612x612_khogew.jpg"
+    capacity: 14
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208141/istockphoto-1814651998-612x612_khogew.jpg")
+    celestial.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    celestial.save!
+
   puts "Yacht #{celestial.id} is created"
 
-galactic = Yacht.create!(
+galactic = Yacht.new(
     user: goldeng,
     name: "Galactic",
     description: "Galactic is a 190-foot superyacht that offers unrivaled luxury and comfort. It includes six lavish cabins, a sun deck with a jacuzzi, and an expansive salon. The yacht also features a gym, a spa, and a private beach club.",
@@ -295,12 +336,15 @@ galactic = Yacht.create!(
     location: "St. Barts, Caribbean",
     is_available: true,
     has_captain: true,
-    capacity: 12,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1970569182-612x612_stahvt.jpg"
+    capacity: 12
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1970569182-612x612_stahvt.jpg")
+    galactic.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    galactic.save!
+
   puts "Yacht #{galactic.id} is created"
 
-sovereign = Yacht.create!(
+sovereign = Yacht.new(
     user: yachta,
     name: "Sovereign",
     description: "Sovereign is a 200-foot superyacht designed to provide the utmost luxury and privacy. It features a spacious master suite, five guest cabins, a sun deck with a hot tub, and a luxurious main salon. Additional amenities include a gym, a sauna, and an onboard cinema.",
@@ -308,12 +352,15 @@ sovereign = Yacht.create!(
     location: "Capri, Italy",
     is_available: true,
     has_captain: false,
-    capacity: 11,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720208139/istockphoto-1436720050-612x612_f96hko.jpg"
+    capacity: 11
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208139/istockphoto-1436720050-612x612_f96hko.jpg")
+    sovereign.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    sovereign.save!
+
   puts "Yacht #{sovereign.id} is created"
 
-majesty = Yacht.create!(
+majesty = Yacht.new(
     user: yachta,
     name: "Majesty",
     description: "Majesty is a 195-foot yacht that combines opulence with performance. It boasts six elegantly furnished cabins, a gourmet kitchen, and a spacious sundeck. Majesty also features a private spa, a swimming pool, and a state-of-the-art entertainment system.",
@@ -321,12 +368,15 @@ majesty = Yacht.create!(
     location: "Nice, France",
     is_available: true,
     has_captain: false,
-    capacity: 10,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720266490/istockphoto-671476056-612x612_regbec.jpg"
+    capacity: 10
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720266490/istockphoto-671476056-612x612_regbec.jpg")
+    majesty.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    majesty.save!
+
   puts "Yacht #{majesty.id} is created"
 
-paradise = Yacht.create!(
+paradise = Yacht.new(
     user: wavew,
     name: "Paradise",
     description: "Paradise is a luxurious 180-foot yacht designed for unparalleled comfort and style. It offers five beautifully appointed cabins, a fully equipped chef's kitchen, and a stunning sundeck perfect for relaxation. Ocean Paradise includes a Jacuzzi, a helipad, and an advanced navigation system.",
@@ -334,12 +384,15 @@ paradise = Yacht.create!(
     location: "Miami, USA",
     is_available: true,
     has_captain: true,
-    capacity: 9,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720266491/istockphoto-470159082-612x612_ghuby1.jpg"
+    capacity: 9
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720266491/istockphoto-470159082-612x612_ghuby1.jpg")
+    paradise.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    paradise.save!
+
   puts "Yacht #{paradise.id} is created"
 
-elegance = Yacht.create!(
+elegance = Yacht.new(
     user: wavew,
     name: "Elegance",
     description: "Elegance is a 160-foot yacht crafted for those who appreciate sophistication. With four luxurious cabins, a state-of-the-art galley, and a spacious lounge area, Serene Elegance offers a serene environment for guests. This yacht features a Jacuzzi, a gym, and an impressive collection of water toys.",
@@ -347,12 +400,15 @@ elegance = Yacht.create!(
     location: "Monaco",
     is_available: true,
     has_captain: false,
-    capacity: 6,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720266489/istockphoto-157197696-612x612_mqbloc.jpg"
+    capacity: 6
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720266489/istockphoto-157197696-612x612_mqbloc.jpg")
+    elegance.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    elegance.save!
+
   puts "Yacht #{elegance.id} is created"
 
-horizon = Yacht.create!(
+horizon = Yacht.new(
     user: sailings,
     name: "Horizon",
     description: "Horizon is a majestic 210-foot yacht renowned for its grandeur and luxury. It boasts seven exquisitely designed cabins, a gourmet dining area, and a spacious sky lounge with panoramic views. Golden Horizon features a cinema, a spa, and a helipad, offering an unparalleled experience for discerning travelers.",
@@ -360,12 +416,15 @@ horizon = Yacht.create!(
     location: "Dubai, UAE",
     is_available: true,
     has_captain: true,
-    capacity: 16,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720266489/istockphoto-519007031-612x612_d4yelf.jpg"
+    capacity: 16
   )
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720266489/istockphoto-519007031-612x612_d4yelf.jpg")
+    horizon.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+    horizon.save!
+
   puts "Yacht #{horizon.id} is created"
 
-azure = Yacht.create!(
+azure = Yacht.new(
     user: sailings,
     name: "Azure",
     description: "Azure is a 175-foot yacht that epitomizes elegance and comfort. It offers six beautifully furnished cabins, a modern kitchen, and an expansive deck for relaxation. Azure Dream includes a private beach club, a water sports platform, and a state-of-the-art audiovisual system, perfect for entertaining guests.",
@@ -373,12 +432,15 @@ azure = Yacht.create!(
     location: "Cannes, France",
     is_available: true,
     has_captain: false,
-    capacity: 9,
-    photo: "https://res.cloudinary.com/djkohlole/image/upload/v1720266486/istockphoto-182707595-612x612_uhh8ei.jpg"
+    capacity: 9
   )
+   file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720266486/istockphoto-182707595-612x612_uhh8ei.jpg")
+   azure.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+   azure.save!
+
   puts "Yacht #{azure.id} is created"
 
-  puts "#{Yacht.count} yachts successfully created!"
+  puts "#{Yacht.new} yachts successfully created!"
 
 puts "Creating bookings..."
 
