@@ -12,7 +12,7 @@
               <div class="card-photo">
                 <% if yacht.photo.attached? %>
                   <%= link_to yacht_path(yacht) do %>
-                    <%= cl_image_tag @yacht.photo.key, class: 'img-fluid rounded' %>
+                    <%= cl_image_tag yacht.photo.key, class: 'img-fluid rounded' %>
                   <% end %>
                 <% else %>
                   <%= link_to yacht_path(yacht) do %>
