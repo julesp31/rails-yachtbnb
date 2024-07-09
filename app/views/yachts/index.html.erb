@@ -12,11 +12,11 @@
               <div class="card-photo">
                 <% if yacht.photo.attached? %>
                   <%= link_to yacht_path(yacht) do %>
-                    <%= image_tag yacht.photo, class: 'img-fluid rounded' %>
+                    <%= cl_image_tag yacht.photo, class: 'img-fluid rounded' %>
                   <% end %>
                 <% else %>
                   <%= link_to yacht_path(yacht) do %>
-                    <%= image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid rounded' %>
+                    <%= cl_image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid rounded' %>
                   <% end %>
                 <% end %>
               </div>
