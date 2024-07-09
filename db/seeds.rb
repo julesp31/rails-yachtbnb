@@ -130,7 +130,7 @@ elysium = Yacht.new(
     has_captain: false,
     capacity: 4
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-2112980112-612x612_jhzttw.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480785/TROPICANA_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-08-21_ioh0zo.jpg")
     elysium.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     elysium.save!
 
@@ -146,7 +146,7 @@ aphrodite = Yacht.new(
     has_captain: true,
     capacity: 8
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480789/CARINTHIA_VII_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-16-33_rmtqxf.jpg")
     aphrodite.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     aphrodite.save!
 
@@ -162,7 +162,7 @@ serenity = Yacht.new(
     has_captain: true,
     capacity: 6
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1970569182-612x612_stahvt.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480784/PANFELISS_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-06-37_q16rt1.jpg")
     serenity.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     serenity.save!
 
@@ -178,7 +178,7 @@ poseidon = Yacht.new(
     has_captain: false,
     capacity: 5
   )
-  file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208140/istockphoto-1457146775-612x612_jcyqvs.jpg")
+  file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720481348/ALLURIA_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-26-33_ogaeiy.jpg")
     poseidon.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     poseidon.save!
 
@@ -194,7 +194,7 @@ odyssey = Yacht.new(
     has_captain: true,
     capacity: 7
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208137/istockphoto-471402693-612x612_yh6jmm.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480783/EDESIA_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-15-46_jmat6u.jpg")
     odyssey.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     odyssey.save!
 
@@ -210,7 +210,7 @@ nautilus = Yacht.new(
     has_captain: false,
     capacity: 5
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208139/istockphoto-1001643196-612x612_nkbmck.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480787/ACACIA_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-04-17_aulwn3.jpg")
     nautilus.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     nautilus.save!
 
@@ -226,7 +226,7 @@ titan = Yacht.new(
     has_captain: true,
     capacity: 15
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208138/istockphoto-671476056-612x612_oid4hd.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720481347/1300x878px_TRIUMPH_JC-0825-cGcxCL9d.jpg_1500_758_2024-07-09_00-24-42_adhrta.jpg")
     titan.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     titan.save!
 
@@ -242,7 +242,7 @@ atlantis = Yacht.new(
     has_captain: true,
     capacity: 12
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208135/istockphoto-182778425-612x612_djkqnt.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720481348/CURIOSITY_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-27-19_o9njlz.jpg")
     atlantis.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     atlantis.save!
 
@@ -258,7 +258,7 @@ neptune = Yacht.new(
     has_captain: false,
     capacity: 8
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208136/istockphoto-470159082-612x612_mek1ih.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480783/EROS_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-15-05_g16gwp.jpg")
     neptune.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     neptune.save!
 
@@ -274,7 +274,7 @@ aurora = Yacht.new(
     has_captain: false,
     capacity: 6
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208136/istockphoto-467026215-612x612_cnxy1q.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480786/VIRTUOSITY_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-02-41_kuv1rm.jpg")
     aurora.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     aurora.save!
 
@@ -290,7 +290,7 @@ amethyst = Yacht.new(
     has_captain: true,
     capacity: 8
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208137/istockphoto-503692962-612x612_kwwboi.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480784/PANFELISS_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-06-37_q16rt1.jpg")
     amethyst.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     amethyst.save!
 
@@ -306,7 +306,7 @@ stella = Yacht.new(
     has_captain: false,
     capacity: 9
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208137/istockphoto-471402693-612x612_yh6jmm.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720481347/TACANUYA_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-25-57_zvnzy3.jpg")
     stella.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     stella.save!
 
@@ -322,7 +322,7 @@ celestial = Yacht.new(
     has_captain: true,
     capacity: 14
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208141/istockphoto-1814651998-612x612_khogew.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720483646/istockphoto-519007031-612x612_d4yelf_1_pq5zgi.jpg")
     celestial.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     celestial.save!
 
@@ -338,7 +338,7 @@ galactic = Yacht.new(
     has_captain: true,
     capacity: 12
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1970569182-612x612_stahvt.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720483647/istockphoto-182778425-612x612_djkqnt_x6llg3.jpg")
     galactic.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     galactic.save!
 
@@ -354,7 +354,7 @@ sovereign = Yacht.new(
     has_captain: false,
     capacity: 11
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720208139/istockphoto-1436720050-612x612_f96hko.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720483552/istockphoto-1427569112-612x612_hfrmf0_ymj3fg.jpg")
     sovereign.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     sovereign.save!
 
@@ -370,7 +370,7 @@ majesty = Yacht.new(
     has_captain: false,
     capacity: 10
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720266490/istockphoto-671476056-612x612_regbec.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720481348/CURIOSITY_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-27-19_o9njlz.jpg")
     majesty.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     majesty.save!
 
@@ -402,7 +402,7 @@ elegance = Yacht.new(
     has_captain: false,
     capacity: 6
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720266489/istockphoto-157197696-612x612_mqbloc.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480783/EDESIA_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-15-46_jmat6u.jpg")
     elegance.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     elegance.save!
 
@@ -418,7 +418,7 @@ horizon = Yacht.new(
     has_captain: true,
     capacity: 16
   )
-    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720266489/istockphoto-519007031-612x612_d4yelf.jpg")
+    file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480786/VIRTUOSITY_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-02-41_kuv1rm.jpg")
     horizon.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     horizon.save!
 
@@ -434,7 +434,7 @@ azure = Yacht.new(
     has_captain: false,
     capacity: 9
   )
-   file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720266486/istockphoto-182707595-612x612_uhh8ei.jpg")
+   file = URI.open("https://res.cloudinary.com/djkohlole/image/upload/v1720480782/DEEP_BLUE_YACHT_FOR_CHARTER_-_FRASER_2024-07-09_00-14-22_qizic5.jpg")
    azure.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
    azure.save!
 
@@ -481,5 +481,3 @@ booking3 = Booking.create!(
   puts "Booking #{booking3.id} is created"
 
   puts "#{Booking.count} bookings successfully created!"
-
-  

@@ -24,7 +24,6 @@
               <p class="card-text text-muted"><%= yacht.description %></p>
               <p class="card-text"><strong>Price:</strong> £<%= number_to_human(yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
               <p class="card-text"><strong>Location:</strong> <%= yacht.location %></p>
-              <p class="card-text"><strong>Available:</strong> <%= yacht.is_available ? 'Yes' : 'No' %></p>
               <p class="card-text"><strong>Captain Included:</strong> <%= yacht.has_captain ? 'Yes' : 'No' %></p>
               <p class="card-text"><strong>Capacity:</strong> <%= yacht.capacity %> guests</p>
             </div>
