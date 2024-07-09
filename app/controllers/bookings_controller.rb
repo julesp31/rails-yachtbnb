@@ -1,23 +1,22 @@
 class BookingsController < ApplicationController
+
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   def show
     @booking = Booking.find(params[:id])
   end
 
-  def new
-    @booking = Booking.new
-  end
-
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+    @yacht = Yacht.find(params[:yacht_id])
+    @booking.yacht = @yacht
     if @booking.save
-      redirect_to @booking, notice: "Booking was successfully created."
+      redirect_to booking_path(@booking)
     else
-      render :new
+      render "yachts/show", status: :unprocessable_entity
     end
   end
 

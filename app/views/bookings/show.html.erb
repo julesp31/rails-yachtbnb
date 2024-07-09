@@ -1,2 +1,16 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<div class="container-listing">
+  <br>
+  <h2><strong>Congratulations, your booking has been confirmed!</strong></h2><br>
+  <h3><strong>Your trip details</strong></h3><br>
+
+  <strong>Start Date: <%= @booking.start_date %></strong> | <strong>End Date: <%= @booking.end_date %></strong>
+  <br>
+  <br>
+  <h4><strong><%= @booking.yacht.name %></strong></h4>
+  <p>Location: <%= @booking.yacht.location %></p>
+  <p><%= @booking.yacht.description %></p>
+
+  <div class="booking-image"><br>
+    <%= image_tag @booking.yacht.photo, class: 'img-fluid yacht-photo' %>
+  </div>
+</div>

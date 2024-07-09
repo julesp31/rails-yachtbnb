@@ -1,2 +1,10 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<div class="submit-review">
+  <%= simple_form_for [@yacht, @review] do |f| %>
+    <label for="review">How was your experience?</label><br>
+    <%= f.label :rating %>
+    <%= f.select :rating, options_for_select([["Please select one", ""], 5, 4, 3, 2, 1]) %>
+
+    <%= f.input :comment, placeholder:"Please enter your comment here" %>
+    <%= f.submit "Submit your review", class: "btn btn-default" %> <br><br>
+  <% end %>
+</div>
