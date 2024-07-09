@@ -11,6 +11,6 @@
   <p><%= @booking.yacht.description %></p>
 
   <div class="booking-image"><br>
-    <%= image_tag @booking.yacht.photo, class: 'img-fluid yacht-photo' %>
+    <%= cl_image_tag @booking.yacht.photo, class: 'img-fluid yacht-photo' %>
   </div>
 </div>
