@@ -1,35 +1,28 @@
 <section class="yachts">
-  <div class="container-fluid">
-    <h2 class="yacht-count"><%= @yachts.count %> Yachts available</h2>
-    <div class="cards">
-      <div class="cards_grid">
-        <% @yachts.each do |yacht| %>
-          <div class="grid-item card">
-            <div class="card-body">
-              <%= link_to yacht_path(yacht), class: 'text-decoration-none text-dark' do %>
-                <h3 class="card-title"><%= yacht.name %></h3>
-              <% end %>
-              <div class="card-photo">
-                <% if yacht.photo.attached? %>
-                  <%= link_to yacht_path(yacht) do %>
-                    <%= cl_image_tag yacht.photo.key, class: 'img-fluid rounded' %>
-                  <% end %>
-                <% else %>
-                  <%= link_to yacht_path(yacht) do %>
-                    <%= cl_image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid rounded' %>
-                  <% end %>
-                <% end %>
-              </div>
-              <br>
-              <p class="card-text text-muted"><%= yacht.description %></p>
-              <p class="card-text"><strong>Price:</strong> £<%= number_to_human(yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
-              <p class="card-text"><strong>Location:</strong> <%= yacht.location %></p>
-              <p class="card-text"><strong>Captain Included:</strong> <%= yacht.has_captain ? 'Yes' : 'No' %></p>
-              <p class="card-text"><strong>Capacity:</strong> <%= yacht.capacity %> guests</p>
-            </div>
-          </div>
+  <h2 class="yacht-count"><%= @yachts.count %> Yachts available</h2>
+
+  <% @yachts.each do |yacht| %>
+    <div class="card-product">
+      <% if yacht.photo.attached? %>
+        <%= link_to yacht_path(yacht) do %>
+          <%= cl_image_tag yacht.photo.key, class: 'img-fluid rounded' %>
         <% end %>
+      <% else %>
+        <%= link_to yacht_path(yacht) do %>
+          <%= cl_image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid rounded' %>
+        <% end %>
+      <% end %>
+
+      <div class="card-product-infos">
+        <%= link_to yacht_path(yacht), class: 'text-decoration-none text-dark' do %>
+          <h3 class="card-title"><%= yacht.name %></h3>
+        <% end %>
+        <p class="card-text text-muted"><%= yacht.description %></p>
+        <p class="card-text"><strong>Price:</strong> £<%= number_to_human(yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
+        <p class="card-text"><strong>Location:</strong> <%= yacht.location %></p>
+        <p class="card-text"><strong>Captain Included:</strong> <%= yacht.has_captain ? 'Yes' : 'No' %></p>
+        <p class="card-text"><strong>Capacity:</strong> <%= yacht.capacity %> guests</p>
       </div>
     </div>
-  </div>
+  <% end %>
 </section>

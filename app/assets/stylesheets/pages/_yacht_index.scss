@@ -1,0 +1,42 @@
+.card-product {
+  overflow: hidden;
+  height: auto; /* Adjust height to fit content */
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Add some space between cards */
+}
+
+.card-product img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product-infos {
+  padding: 16px;
+  flex: 1; /* Allow text to take the remaining space */
+}
+
+.card-product h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-dark {
+  color: #000;
+}
