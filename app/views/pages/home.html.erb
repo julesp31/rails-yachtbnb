@@ -2,59 +2,65 @@
 <!-- Hero Banner -->
 <div class="hero hero-fluid">
   <div class="container">
-    <h1 class="display-4">Rent a Yacht</h1>
-    <p class="lead">Explore the seas <br> with our luxurious yachts.<br></p>
     <br>
+    <br>
+    <h1>Rent a Yacht</h1>
+    <p class="lead">Explore the seas <br> with our luxurious yachts.<br></p>
+    <button class="btn-hero"> Book Now </button>
   </div>
 </div>
 
 
 <section class="sub-banners">
 
-    <div class="sub-banner image-banner1">
-      <div class="sub-banner-content">
-        <%= link_to yachts_path do%>
-          <h2>Explore Yachts</h2>
-          <p>Discover beautiful Yacht</p>
-        <% end %>
-      </div>
+  <div class="sub-banner image-banner1">
+    <div class="sub-banner-content">
+      <%= link_to yachts_path do%>
+        <h2>Explore Yachts</h2>
+        <p>Discover beautiful Yacht</p>
+      <% end %>
     </div>
+  </div>
 
-    <div class="sub-banner image-banner2">
-      <div class="sub-banner-content">
-        <h2>Sign Up</h2>
-        <p>Become part of us</p>
-      </div>
+  <div class="sub-banner image-banner2">
+    <div class="sub-banner-content">
+      <%= link_to bookings_path do%>
+      <h2>Bookings/Availability</h2>
+      <p>Plan your trip</p>
+      <% end  %>
     </div>
+  </div>
 
-    <div class="sub-banner image-banner3">
-      <div class="sub-banner-content">
-        <h2>Services</h2>
-        <p>Plan your trip today</p>
-      </div>
+  <div class="sub-banner image-banner3">
+    <div class="sub-banner-content">
+      <h2>Services</h2>
+      <p>Plan your trip today</p>
     </div>
+  </div>
+
 </section>
 
 <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/about">About Us</a>
-        <a href="/services">Services</a>
-        <a href="/contact">Contact</a>
-      </div>
-
-      <div class="footer-social">
-        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-
-      <div class="footer-info">
-        <p>&copy; 2024 Triageline Yachts.</p>
-      </div>
+  <div class="footer-container">
+    <div class="footer-links">
+      <%= link_to "Home", root_path %>
+      <%= link_to "Yacht", yachts_path %>
+      <%= link_to "Bookings", bookings_path  %>
+      <%= link_to "Sign Up / Login", new_user_session_path, class: %>
     </div>
+
+    <div class="footer-social">
+      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <div class="footer-info">
+      <p>&copy; 2024 Triageline Yachts.</p>
+    </div>
+
+  </div>
 </footer>
 
 <!-- Font Awesome for social media icons -->

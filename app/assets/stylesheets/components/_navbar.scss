@@ -9,8 +9,36 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  padding: 0px 0px;
 }
 
 .navbar-lewagon a {
   color: whitesmoke;
+
+}
+
+.navbar-brand {
+ width: 40px;
+}
+
+.dropdown-menu {
+  background: rgb(1, 47, 93);
+}
+
+.navbar-toggler {
+  background: whitesmoke;
+}
+
+.navbar-toggler-icon {
+  color: rgb(1, 47, 93);
+
+}
+
+#navbarSupportedContent {
+  text-align: right;
+  color: yellow;
+}
+
+.navbar {
+  padding: 0px 32px;
 }
