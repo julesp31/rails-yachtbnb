@@ -3,14 +3,24 @@
   <h2><strong>Congratulations, your booking has been confirmed!</strong></h2><br>
   <h3><strong>Your trip details</strong></h3><br>
 
-  <strong>Start Date: <%= @booking.start_date %></strong> | <strong>End Date: <%= @booking.end_date %></strong>
+  <strong><i class="far fa-calendar-alt"></i> Start Date:</strong> <%= @booking.start_date.strftime("%d %B %Y") %>
+  <strong><i class="far fa-calendar-alt"></i> End Date:</strong> <%= @booking.end_date.strftime("%d %B %Y") %><br>
   <br>
-  <br>
-  <h4><strong><%= @booking.yacht.name %></strong></h4>
-  <p>Location: <%= @booking.yacht.location %></p>
-  <p><%= @booking.yacht.description %></p>
-
-  <div class="booking-image"><br>
-    <%= cl_image_tag @booking.yacht.photo, class: 'img-fluid yacht-photo' %>
+  <div class="mb-4">
+    <h4><strong><%= @booking.yacht.name %></strong></h4>
   </div>
+  <p><i class="fas fa-map-marker-alt"></i> Location: <%= @booking.yacht.location %></p>
+  <p><i class="fas fa-info-circle"></i> <%= @booking.yacht.description %></p>
+
+  <p><i class="fas fa-pound-sign"></i> Price: £<%= number_to_human(@booking.yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
+
+  <p><i class="fas fa-user"></i> Captain Included: <%= @booking.yacht.has_captain ? 'Yes' : 'No' %></p>
+
+  <p><i class="fas fa-users"></i> Capacity: <%= @booking.yacht.capacity %> guests</p>
+
+  <% if @booking.yacht.photo.attached? %>
+    <div class="booking-image"><br>
+      <%= cl_image_tag @booking.yacht.photo.key, class: 'img-fluid yacht-photo' %>
+    </div>
+  <% end %>
 </div>
