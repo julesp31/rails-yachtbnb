@@ -1,41 +1,32 @@
-<section class="yacht-details">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <div class="card-photo">
-                <% if @yacht.photo.attached? %>
-                  <%= cl_image_tag @yacht.photo.key, class: 'img-fluid yacht-photo' %>
-                <% else %>
-                  <%= cl_image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid yacht-photo' %>
-                <% end %>
-              </div>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h1 class="card-title-show"><%= @yacht.name %></h1>
-                <br>
-                <p class="card-text text-muted"><%= @yacht.description %></p>
-                <br>
-                <p class="card-text"><strong>Price:</strong> £<%= number_to_human(@yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
-                <p class="card-text"><strong>Location:</strong> <%= @yacht.location %></p>
-                <p class="card-text"><strong>Available:</strong> <%= @yacht.is_available ? 'Yes' : 'No' %></p>
-                <p class="card-text"><strong>Captain Included:</strong> <%= @yacht.has_captain ? 'Yes' : 'No' %></p>
-                <p class="card-text"><strong>Capacity:</strong> <%= @yacht.capacity %> guests</p>
-                <br>
-                <%= simple_form_for [@yacht, @booking] do |f| %>
-                <%= f.input :start_date %>
-                <%= f.input :end_date %>
-                <%= f.input :status %>
-                <%= f.submit "Book yacht", class: "btn btn-primary" %>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="card-product">
+  <!-- Displays the yacht's photo -->
+  <%= cl_image_tag @yacht.photo.key %>
+
+  <div class="card-product-infos">
+    <!-- Displays the yacht's name -->
+    <h2 class="card-title"><%= @yacht.name %></h2>
+
+    <br>
+
+    <p class="card-text text-muted"><%= @yacht.description %></p>
+    <br>
+
+    <p class="card-text"><strong>Price:</strong> £<%= number_to_human(@yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
+
+    <p class="card-text"><strong>Location:</strong> <%= @yacht.location %></p>
+
+    <p class="card-text"><strong>Captain Included:</strong> <%= @yacht.has_captain ? 'Yes' : 'No' %></p>
+
+    <p class="card-text"><strong>Capacity:</strong> <%= @yacht.capacity %> guests</p>
+
   </div>
-</section>
+</div>
+
+<div class = "p-3">
+    <%= simple_form_for [@yacht, @booking] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.input :status %>
+      <%= f.submit "Book yacht", class: "btn btn-info" %>
+    <% end %>
+</div>

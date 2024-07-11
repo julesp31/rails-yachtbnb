@@ -33,6 +33,8 @@ gem "faker"
 
 gem "cloudinary"
 
+gem 'flatpickr', '~> 4.6.13'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
