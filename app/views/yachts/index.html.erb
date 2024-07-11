@@ -18,7 +18,7 @@
           <h2 class="card-title"><%= yacht.name %></h2>
         <% end %>
         <br>
-        <p class="card-text text-muted"><%= yacht.description %></p>
+        <p class="card-text"><%= yacht.description %></p>
         <br>
         <p class="card-text"><strong>Price:</strong> £<%= number_to_human(yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
         <p class="card-text"><strong>Location:</strong> <%= yacht.location %></p>

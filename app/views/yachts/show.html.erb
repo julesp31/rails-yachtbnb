@@ -8,7 +8,7 @@
 
     <br>
 
-    <p class="card-text text-muted"><%= @yacht.description %></p>
+    <p class="card-text"><%= @yacht.description %></p>
     <br>
 
     <p class="card-text"><strong>Price:</strong> £<%= number_to_human(@yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
@@ -22,11 +22,15 @@
   </div>
 </div>
 
-<div class = "p-3">
+<div class="center-container">
+  <div class="p-4">
+    <h3 class="mb-3">Booking duration</h3>
     <%= simple_form_for [@yacht, @booking] do |f| %>
       <%= f.input :start_date %>
       <%= f.input :end_date %>
-      <%= f.input :status %>
-      <%= f.submit "Book yacht", class: "btn btn-info" %>
+      <div class="p-2">
+        <%= f.submit "Book yacht", class: "btn btn-info" %>
+      </div>
     <% end %>
+  </div>
 </div>
