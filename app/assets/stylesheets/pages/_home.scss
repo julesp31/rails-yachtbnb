@@ -9,7 +9,7 @@
     font-size: 5rem;
   }
 
-  p {
+  h2 {
     color: whitesmoke;
   }
 }
@@ -187,4 +187,76 @@ background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.
   .footer-social {
     margin: 10px 0;
   }
+}
+
+
+
+/* for log in page*/
+
+.Logincontainer {
+  background-image: url('Homepage hero image.jpg');
+  max-width: 1800px;
+  background-size: cover;
+  background-position: center/cover;
+  background-repeat: no-repeat;
+  height: 100vh; /* Ensures full viewport height coverage */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  background-color: rgba(255, 255, 255, 0.9); /* Example: White background with transparency */
+}
+
+.containerLogin {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: whitesmoke;
+  }
+}
+
+
+
+
+.cardLogin {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+
+
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.card-imageLogin {
+  flex: 1;
+  max-width: 33.33%;
+  background: url(https://www.charterworld.com/news/wp-content/uploads/2017/07/Superyacht-Bow.jpg) no-repeat center center/cover;
+
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-formLogin {
+  flex: 2;
+  padding: 20px;
+}
+
+.card-form .form-inputs
+
+.card-form .form-actions {
+  margin-bottom: 20px;
+}
+
+.card-form .form-actions {
+  text-align: right;
 }
