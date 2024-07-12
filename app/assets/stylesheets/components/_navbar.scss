@@ -14,7 +14,7 @@
 
 .navbar-lewagon a {
   color: whitesmoke;
-
+  transition: color 0.3s ease;
 }
 
 .navbar-brand {
@@ -37,4 +37,17 @@
 #navbarSupportedContent {
   text-align: right;
   color: yellow;
+}
+
+.navbar {
+  padding: 0px 32px;
+}
+
+.nav-link {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav  {
+  color: white;
 }

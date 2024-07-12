@@ -1,9 +1,9 @@
-// * Specific CSS for your home-page *//
 
+// * CSS for your home-page *//
 
 .hero {
   height: 500px;
-  background: url(https://www.leonardoyachts.com/wp-content/uploads/2020/10/Eagle-44-daysailer-this-classic-lined-44-foot-sailing-yacht-cuts-through-the-water-like-a-knife-while-sailing-in-comfort-1600x1068.jpg) no-repeat center center/cover;
+  background: url(https://i.insider.com/558472a9ecad042914bebe56) no-repeat center center/cover;
   h1 {
     color: whitesmoke;
     font-size: 5rem;
@@ -18,7 +18,7 @@
   background-color: #ffffff;
   color: rgb(1, 47, 93);
   padding: 15px 32px;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -31,6 +31,23 @@
   color: #ffffff;
 }
 
+.btn-content {
+  border: rgb(1, 47, 93);
+  border: 1px solid rgb(1, 47, 93);
+  background-color: #ffffff;
+  color: rgb(1, 47, 93);
+  padding: 15px 32px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-content:hover {
+  background-color: rgb(1, 47, 93); /* Background color on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+  color: #ffffff; /* Text color on hover */
+}
 
 //* Sub Banners *//
 .sub-banners {
@@ -49,12 +66,6 @@
   background-position: center;
 }
 
-.sub-banners {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-
 .image-banner1 {
   background: url('https://wallpapercave.com/wp/wp3410929.jpg') no-repeat center center/cover;
 }
@@ -62,7 +73,7 @@
   background: url('https://luxurylaunches.com/wp-content/uploads/2015/12/Kometa-at-dawn-1.jpg') no-repeat center center/cover;
 }
 .image-banner3 {
-background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.jpg') no-repeat center center/cover;
+  background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.jpg') no-repeat center center/cover;
 }
 
 .sub-banner {
@@ -73,39 +84,34 @@ background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.
   align-items: center;
   position: relative;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
+}
+.sub-banner-content {
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 10px;
 
+  a {
+    text-decoration: none;
+  }
 
-  .sub-banner-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
+  h2 {
     color: white;
-    position: absolute;
-    bottom: 10px;
+  }
 
-    a {
-      text-decoration: none;
-    }
-
-    h2 {
-      color: white;
-    }
-
-    p {
-      color: white;
-    }
+  p {
+    color: white;
   }
 }
 
 .sub-banner:hover {
   transform: scale(1.05);
 }
-
-
 
 .sub-banner h2 {
   margin: 0;
@@ -129,6 +135,40 @@ background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.
     margin-bottom: 20px;
   }
 }
+
+
+//* NEW *//
+
+.sub-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sub-banner h2,
+.sub-banner p {
+  margin: 0;
+}
+
+.sub-banner:hover {
+  transform: scale(1.05);
+}
+
+.sub-banner:hover::before {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.sub-banner:hover .sub-banner-content {
+  opacity: 1;
+}
+
 
 
 //* Footer styles *//
@@ -187,76 +227,4 @@ background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.
   .footer-social {
     margin: 10px 0;
   }
-}
-
-
-
-/* for log in page*/
-
-.Logincontainer {
-  background-image: url('Homepage hero image.jpg');
-  max-width: 1800px;
-  background-size: cover;
-  background-position: center/cover;
-  background-repeat: no-repeat;
-  height: 100vh; /* Ensures full viewport height coverage */
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  background-color: rgba(255, 255, 255, 0.9); /* Example: White background with transparency */
-}
-
-.containerLogin {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: whitesmoke;
-  }
-}
-
-
-
-
-.cardLogin {
-  display: flex;
-  flex-direction: row;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #fff;
-
-
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-}
-
-.card-imageLogin {
-  flex: 1;
-  max-width: 33.33%;
-  background: url(https://www.charterworld.com/news/wp-content/uploads/2017/07/Superyacht-Bow.jpg) no-repeat center center/cover;
-
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card-formLogin {
-  flex: 2;
-  padding: 20px;
-}
-
-.card-form .form-inputs
-
-.card-form .form-actions {
-  margin-bottom: 20px;
-}
-
-.card-form .form-actions {
-  text-align: right;
 }
