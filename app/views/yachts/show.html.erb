@@ -1,36 +1,55 @@
-<div class="card-product">
-  <!-- Displays the yacht's photo -->
-  <%= cl_image_tag @yacht.photo.key %>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-  <div class="card-product-infos">
-    <!-- Displays the yacht's name -->
-    <h2 class="card-title"><%= @yacht.name %></h2>
+<div class="container-full">
+  <div class="card-product">
+    <!-- Displays the yacht's photo -->
+    <%= cl_image_tag @yacht.photo.key %>
+    <div class="card-product-infos">
+      <!-- Displays the yacht's name -->
+      <h2 class="card-title lobster-regular"><%= @yacht.name %></h2>
 
-    <br>
+      <!-- Description -->
+      <p class="card-text roboto"><%= @yacht.description %></p>
 
-    <p class="card-text"><%= @yacht.description %></p>
-    <br>
-
-    <p class="card-text"><strong>Price:</strong> £<%= number_to_human(@yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
-
-    <p class="card-text"><strong>Location:</strong> <%= @yacht.location %></p>
-
-    <p class="card-text"><strong>Captain Included:</strong> <%= @yacht.has_captain ? 'Yes' : 'No' %></p>
-
-    <p class="card-text"><strong>Capacity:</strong> <%= @yacht.capacity %> guests</p>
-
-  </div>
-</div>
-
-<div class="center-container">
-  <div class="p-4">
-    <h3 class="mb-3">Booking duration</h3>
-    <%= simple_form_for [@yacht, @booking] do |f| %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date %>
-      <div class="p-2">
-        <%= f.submit "Book yacht", class: "btn btn-info" %>
+      <!-- Price -->
+      <div class="card-text">
+        <%= image_tag 'pound-money.png', style: 'width: 60px; height: 60px; float: left; margin-right: 10px;' %>
+        <strong>£<%= number_to_human(@yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</strong>
       </div>
-    <% end %>
+
+      <!-- Location -->
+      <div class="card-text roboto">
+        <%= image_tag 'pin.png', style: 'width: 50px; height: 50px; float: left; margin-right: 10px;' %>
+        <strong><%= @yacht.location %></strong>
+      </div>
+
+      <!-- Captain availability -->
+      <div class="card-text roboto">
+        <%= image_tag 'captain.png', style: 'width: 60px; height: 60px; float: left; margin-right: 10px;' %>
+        <strong><%= @yacht.has_captain ? 'Yes' : 'No' %></strong>
+      </div>
+
+      <!-- Guest capacity -->
+      <div class="card-text roboto">
+        <%= image_tag 'users.png', style: 'width: 60px; height: 60px; float: left; margin-right: 10px;' %>
+        <strong><%= @yacht.capacity %> guests</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking form -->
+  <div class="center-container mt-5">
+    <div class="p-4 text-center mx-auto">
+      <h4 class="mb-3 lobster-regular">Book here</h4>
+      <%= simple_form_for [@yacht, @booking], html: { class: 'roboto' } do |f| %>
+        <%= f.input :start_date, input_html: { class: 'bold-roboto' } %>
+        <%= f.input :end_date, input_html: { class: 'bold-roboto' } %>
+        <div class="p-2">
+          <%= f.submit "Submit", class: "btn btn-info bold-roboto" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

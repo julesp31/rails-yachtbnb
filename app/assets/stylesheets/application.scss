@@ -11,6 +11,35 @@
 @import "components/index";
 @import "pages/index";
 
+body {
+  background: linear-gradient(to top, #30cfd0 0%, #081b67 100%);;
+  background-attachment: fixed;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0;
+  color: #012F5D;
+}
+
+.bold-roboto {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #012F5D;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #012F5D;
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #012F5D;
+  font-size: 48px;
+}
 
 
 .container-listing {
@@ -20,7 +49,6 @@
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  font-family: Arial, sans-serif;
 }
 
 .container-listing h2 {
@@ -53,8 +81,6 @@
 }
 
 .yacht-photo {
-  max-width: 100%;
-  height: auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,10 +102,10 @@
   max-width: 500px;
 }
 
-body {
-  background: white;
-  font-family: 'Helvetica', sans-serif;
-}
+// body {
+//   background: white;
+//   font-family: 'Helvetica', sans-serif;
+// }
 .text-decoration-none {
   text-decoration: none !important; /* Remove underline from links */
 }
@@ -94,15 +120,24 @@ body {
   margin-bottom: 20px; /* Add some space between cards */
 }
 
+// .card-product img {
+//   height: 805px;
+//   width: 1200px;
+//   object-fit:fill;
+// }
+
 .card-product img {
-  height: 300px;
-  width: 600px;
-  object-fit: cover;
+  max-width: 700px; /* Ensures the image does not exceed its container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Covers the container while maintaining aspect ratio */
+}
+
+.card-product-infos h2 {
+  text-align: center;
 }
 
 .card-product-infos {
-  padding: 16px;
-  flex: 1; /* Allow text to take the remaining space */
+  padding: 20px;
 }
 
 .card-product h3 {
@@ -112,10 +147,11 @@ body {
 }
 
 .card-product p {
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 18px;
+  line-height: 1.6;
   margin-bottom: 0;
   margin-top: 0;
+  color: #012F5D;
 }
 
 .text-decoration-none {
@@ -123,7 +159,7 @@ body {
 }
 
 .text-dark {
-  color: #000;
+  color: #012F5D;
 }
 
 
@@ -137,14 +173,17 @@ body {
 
 @media (min-width: 576px) {
   .cards_grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(1fr));
     gap: 20px;
+    flex-direction: column;
   }
 }
 
 /* Media queries for various device sizes (optional: if needed) */
-@media (min-width: 768px) {
-  /* Specific styles for tablets and larger screens */
+@media (max-width: 768px) {
+  .card-product {
+    flex-direction: column; /* Example adjustment for smaller screens */
+  }
 }
 
 @media (min-width: 992px) {
