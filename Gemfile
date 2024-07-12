@@ -33,6 +33,8 @@ gem "faker"
 
 gem "cloudinary"
 
+gem 'flatpickr', '~> 4.6.13'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -53,7 +55,7 @@ gem "bootsnap", require: false
 
 gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
-gem "font-awesome-sass", "~> 6.1"
+gem "font-awesome-sass", "~> 6.1.2"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 

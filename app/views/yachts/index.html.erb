@@ -5,7 +5,7 @@
     <div class="card-product">
       <% if yacht.photo.attached? %>
         <%= link_to yacht_path(yacht) do %>
-          <%= cl_image_tag yacht.photo.key, class: 'img-fluid rounded' %>
+          <%= cl_image_tag yacht.photo.key %>
         <% end %>
       <% else %>
         <%= link_to yacht_path(yacht) do %>
@@ -15,9 +15,11 @@
 
       <div class="card-product-infos">
         <%= link_to yacht_path(yacht), class: 'text-decoration-none text-dark' do %>
-          <h3 class="card-title"><%= yacht.name %></h3>
+          <h2 class="card-title"><%= yacht.name %></h2>
         <% end %>
-        <p class="card-text text-muted"><%= yacht.description %></p>
+        <br>
+        <p class="card-text"><%= yacht.description %></p>
+        <br>
         <p class="card-text"><strong>Price:</strong> £<%= number_to_human(yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</p>
         <p class="card-text"><strong>Location:</strong> <%= yacht.location %></p>
         <p class="card-text"><strong>Captain Included:</strong> <%= yacht.has_captain ? 'Yes' : 'No' %></p>

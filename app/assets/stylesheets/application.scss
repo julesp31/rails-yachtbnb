@@ -12,6 +12,7 @@
 @import "pages/index";
 
 
+
 /* Base styles */
 // body, html {
 //   margin-left:1%;
@@ -22,8 +23,72 @@
 //   height:98%;
 // }
 
+.container-listing {
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+.container-listing h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container-listing h3 {
+  color: #555;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.container-listing h4 {
+  color: #444;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.container-listing p {
+  margin: 5px 0;
+  margin-bottom: 20px;
+}
+
+.container-listing .booking-image {
+  margin-top: 20px;
+}
+
+.yacht-photo {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-4 {
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.p-4 input {
+  width: 100%;
+  max-width: 500px;
+}
+
 body {
-  font-family: 'Helvetica', sans-serif; /* Example of a nice font family */
+  background: white;
+  font-family: 'Helvetica', sans-serif;
 }
 .text-decoration-none {
   text-decoration: none !important; /* Remove underline from links */
@@ -40,9 +105,9 @@ body {
 }
 
 .card-product img {
-  height: 200px;
-  width: 200;
-  object-fit: contain;
+  height: 300px;
+  width: 600px;
+  object-fit: cover;
 }
 
 .card-product-infos {
@@ -59,7 +124,6 @@ body {
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
-  opacity: .7;
   margin-bottom: 0;
   margin-top: 0;
 }
