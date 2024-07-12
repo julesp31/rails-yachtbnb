@@ -3,7 +3,7 @@
 
 .hero {
   height: 500px;
-  background: url(https://www.leonardoyachts.com/wp-content/uploads/2020/10/Eagle-44-daysailer-this-classic-lined-44-foot-sailing-yacht-cuts-through-the-water-like-a-knife-while-sailing-in-comfort-1600x1068.jpg) no-repeat center center/cover;
+  background: url(https://i.insider.com/558472a9ecad042914bebe56) no-repeat center center/cover;
   h1 {
     color: whitesmoke;
     font-size: 5rem;
@@ -66,12 +66,6 @@
   background-position: center;
 }
 
-// .sub-banners {
-//   display: flex;
-//   justify-content: space-around;
-//   margin: 20px 0;
-// }
-
 .image-banner1 {
   background: url('https://wallpapercave.com/wp/wp3410929.jpg') no-repeat center center/cover;
 }
@@ -79,7 +73,7 @@
   background: url('https://luxurylaunches.com/wp-content/uploads/2015/12/Kometa-at-dawn-1.jpg') no-repeat center center/cover;
 }
 .image-banner3 {
-background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.jpg') no-repeat center center/cover;
+  background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.jpg') no-repeat center center/cover;
 }
 
 .sub-banner {
@@ -95,7 +89,6 @@ background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.
   transition: transform 0.3s ease;
 }
 .sub-banner-content {
-  // background: rgba(1, 47, 93, 0.4);
   padding: 15px;
   border-radius: 8px;
   text-align: center;
@@ -158,28 +151,6 @@ background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-// .image-banner1::before {
-//   background-image: url('https://wallpapercave.com/wp/wp3410929.jpg');
-// }
-
-// .image-banner2::before {
-//   background-image: url('https://luxurylaunches.com/wp-content/uploads/2015/12/Kometa-at-dawn-1.jpg');
-// }
-
-// .image-banner3::before {
-//   background-image: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.jpg');
-// }
-
-// .sub-banner-content {
-//   position: relative;
-//   z-index: 2;
-//   color: white;
-//   text-align: center;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   transition: opacity 0.3s ease;
-// }
-
 .sub-banner h2,
 .sub-banner p {
   margin: 0;
@@ -197,20 +168,6 @@ background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.
 .sub-banner:hover .sub-banner-content {
   opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -270,98 +227,4 @@ background: url('https://mb.cision.com/Public/4617/9528502/9a95ae41eb2b5835_org.
   .footer-social {
     margin: 10px 0;
   }
-}
-
-
-
-
-
-/* for log in & Add in page*/
-
-  .formbgrcontainer {
-    position: relative; /* Ensure positioning context for pseudo-element */
-    background-image: url('Homepage hero image.jpg');
-    max-width: 1800px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Ensures full viewport height coverage */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-  }
-
-  .formbgrcontainer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(3, 25, 47, 0.8); /* Adjust opacity (0.7 for 70% white) */
-    z-index: 1; /* Ensure overlay is above background image */
-  }
-
-  .formbgrcontainer .cardcontainer {
-    position: relative; /* Ensure content stays above the pseudo-element */
-    z-index: 2; /* Ensure content is above overlay */
-    padding: 20px;
-  }
-
-.formbgrcontainer .formlook {
-  position: relative; /* Ensure content stays above the pseudo-element */
-  z-index: 2; /* Ensure content is above overlay */
-  padding: 20px;
-}
-
-.cardcontainer {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-
-  h1,h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: whitesmoke;
-  }
-
-  h1{
-
-  }
-}
-
-.cardinside {
-  display: flex;
-  flex-direction: row;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #fff;
-  border: 0.5px solid #ddd;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-.card-image {
-  flex: 1;
-  max-width: 33.33%;
-  background: url(https://i.pinimg.com/originals/ba/60/fe/ba60feb2a758ab59349391defc706938.jpg) no-repeat center center/cover;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card-form {
-  flex: 2;
-  padding: 40px;
-}
-
-.card-form .form-inputs
-
-.card-form .form-actions {
-  margin-bottom: 20px;
-}
-
-.card-form .form-actions {
-  text-align: right;
 }
