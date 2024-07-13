@@ -14,6 +14,38 @@
   }
 }
 
+.gilda-display-regular {
+  font-family: "Gilda Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.bold-roboto {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  color: #012F5D;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #012F5D;
+  font-size: 48px;
+}
+
 .btn-hero {
   background-color: #ffffff;
   color: rgb(1, 47, 93);
@@ -53,7 +85,7 @@
 .sub-banners {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   margin: 20px 0;
 }
 
@@ -67,7 +99,7 @@
 }
 
 .image-banner1 {
-  background: url('https://wallpapercave.com/wp/wp3410929.jpg') no-repeat center center/cover;
+  background: url('https://wallpaperaccess.com/full/4243055.jpg') no-repeat center center/cover;
 }
 .image-banner2 {
   background: url('https://luxurylaunches.com/wp-content/uploads/2015/12/Kometa-at-dawn-1.jpg') no-repeat center center/cover;
@@ -78,18 +110,16 @@
 
 .sub-banner {
   width: 30%;
-  height: 30vh;
+  height: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   cursor: pointer;
-  border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
 .sub-banner-content {
-  padding: 15px;
   border-radius: 8px;
   text-align: center;
   color: white;
@@ -114,8 +144,7 @@
 }
 
 .sub-banner h2 {
-  margin: 0;
-  font-size: 1.5rem;
+  font-size: 40px;
 }
 
 .sub-banner p {

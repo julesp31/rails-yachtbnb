@@ -1,56 +1,46 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-<!-- Hero Banner -->
 <div class="hero hero-fluid">
   <div class="container">
     <br>
     <br>
-    <h1>Rent a Yacht</h1>
-    <h2> Experience Ultimate Luxury  <br> on the Open Seas.<br><br></h2>
-    <%= link_to yachts_path do%>
-    <button class="btn-hero"> Book Now </button>
+    <h1 class="lobster-regular">Charter a Yacht</h1>
+    <h2 class="roboto-light"> Experience Ultimate Luxury  <br> on the Open Seas.<br><br></h2>
+    <%= link_to yachts_path do %>
+      <button class="btn-hero"> Book Now </button>
     <% end %>
   </div>
 </div>
 
-
 <section class="sub-banners">
 
-  <div class="sub-banner image-banner1" >
+  <%= link_to yachts_path, class: "sub-banner image-banner1" do %>
     <div class="sub-banner-content">
-      <%= link_to yachts_path do%>
-        <h2>Explore Yachts</h2>
-        <p>Discover beautiful yacht</p>
+      <h2 class="lobster-regular">Explore Yachts</h2>
+    </div>
+  <% end %>
+
+  <%= link_to bookings_path, class: "sub-banner image-banner2" do %>
+    <div class="sub-banner-content">
+      <h2 class="lobster-regular">Bookings</h2>
+    </div>
+  <% end %>
+
+  <%= link_to new_yacht_path, class: "sub-banner image-banner3" do %>
+    <div class="sub-banner-content">
+      <h2 class="lobster-regular">Add Yacht</h2>
+    </div>
       <% end %>
-    </div>
-  </div>
-
-  <div class="sub-banner image-banner2">
-    <div class="sub-banner-content">
-      <%= link_to bookings_path do%>
-      <h2>Availability</h2>
-      <p>Plan your trip</p>
-      <% end  %>
-    </div>
-  </div>
-
-  <div class="sub-banner image-banner3">
-    <div class="sub-banner-content">
-      <h2>Sublet your yacht</h2>
-      <p>Generate income effortlessly</p>
-    </div>
   </div>
 
 </section>
 
 <footer class="footer">
   <div class="footer-container">
-    <div class="footer-links">
-      <%= link_to "Home", root_path %>
-      <%= link_to "Yacht", yachts_path %>
-      <%= link_to "Bookings", bookings_path  %>
-      <%= link_to "Sign Up / Login", new_user_session_path, class: %>
-    </div>
-
     <div class="footer-social">
       <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
       <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -59,9 +49,8 @@
     </div>
 
     <div class="footer-info">
-      <p>&copy; 2024 Triageline Yachts.</p>
+      <p>&copy; Oceanic Dreams</p>
     </div>
-
   </div>
 </footer>
 
