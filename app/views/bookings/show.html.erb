@@ -7,8 +7,15 @@
   &nbsp;&nbsp;&nbsp;&nbsp;
   <strong><i class="far fa-calendar-alt"></i> End Date:</strong> <%= @booking.end_date.strftime("%d %B %Y") %><br>
   <br>
-  <div class="mb-4">
-    <h4><strong><%= @booking.yacht.name %></strong></h4>
+
+  <br>
+  <h4><strong><%= @booking.yacht.name %></strong></h4>
+  <p>Location: <%= @booking.yacht.location %></p>
+  <p><%= @booking.yacht.description %></p>
+
+  <div class="booking-image"><br>
+    <%= cl_image_tag @booking.yacht.photo.key, class: 'img-fluid yacht-photo' %>
+
   </div>
   <p><i class="fas fa-map-marker-alt"></i> Location: <%= @booking.yacht.location %></p>
   <p><i class="fas fa-info-circle"></i> <%= @booking.yacht.description %></p>
