@@ -15,10 +15,10 @@
 }
 
 .btn-hero {
-  background-color: #ffffff;
+  background-color: #ffcf73;
   color: rgb(1, 47, 93);
   padding: 15px 32px;
-  font-size: 18px;
+  font-size: 28px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -29,15 +29,16 @@
   background-color: rgb(1, 47, 93);
   transform: scale(1.05);
   color: #ffffff;
+  font-size: 28px;
 }
 
 .btn-content {
   border: rgb(1, 47, 93);
-  border: 1px solid rgb(1, 47, 93);
-  background-color: #ffffff;
+  // border: 1px solid rgb(1, 47, 93);
+  background-color: #ffcf73;;
   color: rgb(1, 47, 93);
   padding: 15px 32px;
-  font-size: 18px;
+  font-size: 28px;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -47,6 +48,7 @@
   background-color: rgb(1, 47, 93); /* Background color on hover */
   transform: scale(1.05); /* Slightly increase size on hover */
   color: #ffffff; /* Text color on hover */
+  font-size: 28px;
 }
 
 //* Sub Banners *//
