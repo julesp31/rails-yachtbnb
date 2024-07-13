@@ -19,7 +19,7 @@ User.destroy_all
 
 puts "Creating users..."
 
-User.create!(
+test = User.create!(
     email: 'test@test.com',
     first_name: 'Test',
     last_name: 'Test',
@@ -445,7 +445,7 @@ azure = Yacht.new(
 puts "Creating bookings..."
 
 booking1 = Booking.create!(
-    user: yachtk,
+    user: test,
     yacht: azure,
     status: "placed",
     start_date: DateTime.strptime("08/12/2024 11:00", "%d/%m/%Y %H:%M"),
