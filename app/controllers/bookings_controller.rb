@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = current_user.bookings
+    @yachts = @bookings.map { |booking| booking.yacht}
   end
 
   def show
@@ -18,6 +19,12 @@ class BookingsController < ApplicationController
     else
       render "yachts/show", status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path, status: :see_other
   end
 
   private
