@@ -47,21 +47,24 @@
 }
 
 .btn-hero {
-  background-color: #ffcf73;
-  color: rgb(1, 47, 93);
-  padding: 15px 32px;
-  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; /* Make the font bold */
+  font-size: 20px;  /* Large font size */
+  padding: 10px 20px;
+  background-color: #FFC65A; /* Bootstrap info color */
+  color: #012F5D;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px; /* Add margin at the top */
+  text-decoration: none; /* Remove underline */
+  display: inline-block;
 }
 
 .btn-hero:hover {
-  background-color: rgb(1, 47, 93);
-  transform: scale(1.05);
-  color: #ffffff;
-  font-size: 28px;
+  background-color: #f5d290;
+  color: #012F5D;
+  font-size: 20px;
 }
 
 .btn-content {
