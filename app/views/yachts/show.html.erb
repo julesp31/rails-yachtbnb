@@ -8,39 +8,40 @@
     <%= cl_image_tag @yacht.photo.key %>
     <div class="card-product-infos">
       <!-- Displays the yacht's name -->
-      <h2 class="card-title lobster-regular"><%= @yacht.name %></h2>
+      <h2 class="card-title lobster-regular"><%= @yacht.name %></h2><br>
 
       <!-- Description -->
-      <p class="card-text roboto"><%= @yacht.description %></p>
+      <p class="card-text roboto p-1 m-2 icons"><%= @yacht.description %></p><br>
 
-      <!-- Price -->
-      <div class="card-text">
-        <%= image_tag 'pound-money.png', style: 'width: 60px; height: 60px; float: left; margin-right: 10px;' %>
-        <strong>£<%= number_to_human(@yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</strong>
+      <!-- Price and Capacity (in-line) -->
+        <div class="icons card-text roboto d-flex align-items-center">
+            <div class="icons d-flex align-items-center">
+              <%= image_tag 'pound-money.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
+              <strong>£<%= number_to_human(@yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</strong>
+            </div>
+            <div class="icons d-flex align-items-center">
+              <%= image_tag 'users.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
+              <strong><%= @yacht.capacity %> guests</strong>
+            </div>
+          </div><br>
+          <div class="icons">
+            <div class="col-6 d-flex align-items-center">
+              <%= image_tag 'pin.png', style: 'width: 35px; height: 35px; margin-right: 10px;' %>
+              <strong><%= @yacht.location %></strong>
+            </div>
+            <div class="icons d-flex align-items-center">
+              <%= image_tag 'captain.png', style: 'width: 35px; height: 35px; margin-right: 10px;' %>
+              <strong><%= @yacht.has_captain ? 'Yes' : 'No' %></strong>
+            </div>
+        </div>
+        <br>
+
       </div>
 
-      <!-- Location -->
-      <div class="card-text roboto">
-        <%= image_tag 'pin.png', style: 'width: 50px; height: 50px; float: left; margin-right: 10px;' %>
-        <strong><%= @yacht.location %></strong>
-      </div>
-
-      <!-- Captain availability -->
-      <div class="card-text roboto">
-        <%= image_tag 'captain.png', style: 'width: 60px; height: 60px; float: left; margin-right: 10px;' %>
-        <strong><%= @yacht.has_captain ? 'Yes' : 'No' %></strong>
-      </div>
-
-      <!-- Guest capacity -->
-      <div class="card-text roboto">
-        <%= image_tag 'users.png', style: 'width: 60px; height: 60px; float: left; margin-right: 10px;' %>
-        <strong><%= @yacht.capacity %> guests</strong>
-      </div>
-    </div>
   </div>
 
   <!-- Booking form -->
-  <div class="center-container mt-5">
+  <div class="center-container">
     <div class="p-4 text-center mx-auto">
       <h4 class="mb-3 lobster-regular">Book here</h4>
       <%= simple_form_for [@yacht, @booking], html: { class: 'roboto' } do |f| %>
