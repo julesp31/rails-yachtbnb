@@ -10,20 +10,109 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "flatpickr/dist/flatpickr.min.css";
-
-/* Base styles */
-body, html {
-  // margin-left:1%;
-  // margin-right:1%;
-  // width:98%;
-  // height:98%;
-}
 
 body {
-  background: white;
-  font-family: 'Helvetica', sans-serif; /* Example of a nice font family */
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  background-attachment: fixed;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0;
+  color: #012F5D;
 }
+
+.bold-roboto {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #012F5D;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #012F5D;
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #012F5D;
+  font-size: 48px;
+}
+
+
+.container-listing {
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.container-listing h2 {
+  color: indigo;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container-listing h3 {
+  color: rgb(50, 50, 50);
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.container-listing h4 {
+  color: rgb(70, 70, 70);
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.container-listing p {
+  margin: 5px 0;
+  margin-bottom: 20px;
+}
+
+.container-listing .booking-image {
+  margin-top: 20px;
+}
+
+.yacht-photo {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-4 {
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.p-4 input {
+  width: 100%;
+  max-width: 500px;
+}
+
+.icons {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+// body {
+//   background: white;
+//   font-family: 'Helvetica', sans-serif;
+// }
 .text-decoration-none {
   text-decoration: none !important; /* Remove underline from links */
 }
@@ -38,16 +127,22 @@ body {
   margin-bottom: 20px; /* Add some space between cards */
 }
 
+// .card-product img {
+//   height: 805px;
+//   width: 1200px;
+//   object-fit:fill;
+// }
+
 .card-product img {
-  height: 200px;
-  width: 400px;
-  object-fit: cover;
+  max-width: 700px; /* Ensures the image does not exceed its container */
+  height: 400px; /* Maintains aspect ratio */
+  object-fit: fill; /* Covers the container while maintaining aspect ratio */
 }
 
-.card-product-infos {
-  padding: 16px;
-  flex: 1; /* Allow text to take the remaining space */
+.card-product-infos h2 {
+  text-align: center;
 }
+
 
 .card-product h3 {
   font-size: 16px;
@@ -56,11 +151,9 @@ body {
 }
 
 .card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #012F5D;
 }
 
 .text-decoration-none {
@@ -68,15 +161,36 @@ body {
 }
 
 .text-dark {
-  color: #000;
+  color: #012F5D;
 }
 
+.card-product {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
 
+.card-product img {
+  max-width: 700px;
+  height: 400px;
+}
 
-// .card:hover {
-//   transform: translateY(-5px); /* Lift card on hover */
-//   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-// }
+.card-product-infos {
+  width: 100%;
+  text-align: center;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-text {
+  margin-bottom: 5px;
+}
 
 
 
@@ -89,14 +203,16 @@ body {
 
 @media (min-width: 576px) {
   .cards_grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(1fr));
+    flex-direction: column;
   }
 }
 
 /* Media queries for various device sizes (optional: if needed) */
-@media (min-width: 768px) {
-  /* Specific styles for tablets and larger screens */
+@media (max-width: 768px) {
+  .card-product {
+    flex-direction: column; /* Example adjustment for smaller screens */
+  }
 }
 
 @media (min-width: 992px) {

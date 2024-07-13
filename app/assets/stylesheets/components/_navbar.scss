@@ -14,7 +14,7 @@
 
 .navbar-lewagon a {
   color: whitesmoke;
-
+  transition: color 0.3s ease;
 }
 
 .navbar-brand {
@@ -39,6 +39,21 @@
   color: yellow;
 }
 
-.navbar {
-  padding: 0px 32px;
+
+.nav-link {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav  {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover {
+  color: gold; /* Change to your preferred hover color */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: whitesmoke; /* Change to your preferred hover background color for dropdown items */
+  color: black; /* Ensure text is readable */
 }

@@ -1,13 +1,12 @@
 
-<div class="Logincontainer">
-  <div class="containerLogin">
+<div class="formbgrcontainer">
+  <div class="cardcontainer">
+    <br>
     <h2>Log in</h2>
-        <%# <%= image_tag 'Homepage hero image.jpg', alt: 'Login Image' %>
-
-    <div class="cardLogin">
-      <div class="card-imageLogin">
-      </div>
-      <div class="card-formLogin">
+    <div class="cardinside">
+      <div class="card-image">
+    </div>
+    <div class="card-form">
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">
             <%= f.input :email,
@@ -19,9 +18,8 @@
                         input_html: { autocomplete: "current-password" } %>
             <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
-
-          <div class="form-actions">
-            <%= f.button :submit, "Log in" %>
+          <div class="btn-form">
+            <%= f.button :submit, "Log in", class: "btn-content" %>
           </div>
         <% end %>
         <%= render "devise/shared/links" %>
