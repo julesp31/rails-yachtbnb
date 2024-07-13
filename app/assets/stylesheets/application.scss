@@ -132,7 +132,7 @@ body {
 // }
 
 .card-product img {
-  max-width: 700px; /* Ensures the image does not exceed its container */
+  width: 700px; /* Ensures the image does not exceed its container */
   height: 400px; /* Maintains aspect ratio */
   object-fit: fill; /* Covers the container while maintaining aspect ratio */
 }

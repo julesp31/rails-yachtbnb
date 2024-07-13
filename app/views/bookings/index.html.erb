@@ -1,6 +1,11 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
 <section class="yachts">
   <% @bookings.each do |booking| %>
-    <div class="card-product">
+    <div class="card-product position-relative">
       <% if booking.yacht.photo.attached? %>
         <%= link_to yacht_path(booking.yacht) do %>
           <%= cl_image_tag booking.yacht.photo.key %>
@@ -10,6 +15,7 @@
           <%= cl_image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid rounded' %>
         <% end %>
       <% end %>
+
       <div class="card-product-infos">
         <%= link_to yacht_path(booking.yacht), class: 'text-decoration-none text-dark' do %>
           <h2 class="card-title lobster-regular"><%= booking.yacht.name %></h2>
@@ -40,17 +46,17 @@
           </div>
         </div>
         <br>
-        <!-- Booking Button -->
-
-         </div>
-         <br>
-         <div class="icons d-flex align-items-center">
-            <strong><%= booking.start_date.strftime('%d-%m-%Y') %>&nbsp;&nbsp;&nbsp;&nbsp; to</strong>
-            <strong><%= booking.end_date.strftime('%d-%m-%Y') %></strong>
-            <strong><%= booking.total_price %> Total Price</strong>
-            <%= link_to 'Cancel', booking_path(booking), method: :delete, data: { "turbo-method": :delete, turbo_confirm: 'Are you sure?' } %>
-         </div>
+        <div class="position-absolute top-0 end-0 mt-3 me-3">
+          <%= link_to 'Cancel', booking_path(booking), method: :delete, class: 'btn btn-sm btn-danger text-white', data: { "turbo-method": :delete, turbo_confirm: 'Are you sure?' } %>
+        </div>
+        <hr style="border-top: 2px solid indigo; margin-top: 10px; margin-bottom: 10px;">
+        <div class="d-flex justify-content-center" style="font-size: 25px; color: indigo;">
+          <%= image_tag 'calendar.png', style: 'width: 35px; height: 35px; margin-right: 10px;' %>
+          <strong><%= booking.start_date.strftime('%B %e, %Y') %></strong> <!-- Example: January 1, 2023 -->
+          &nbsp;-&nbsp;
+          <strong><%= booking.end_date.strftime('%B %e, %Y') %></strong> <!-- Example: January 5, 2023 -->
+        </div>
       </div>
-   </div>
-   <% end %>
+    </div>
+  <% end %>
 </section>
