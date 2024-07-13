@@ -1,48 +1,53 @@
 <section class="yachts">
-   <% @bookings.each do |booking| %>
-   <div class="card-product">
+  <% @bookings.each do |booking| %>
+    <div class="card-product">
       <% if booking.yacht.photo.attached? %>
-      <%= link_to yacht_path(booking.yacht) do %>
-      <%= cl_image_tag booking.yacht.photo.key %>
-      <% end %>
+        <%= link_to yacht_path(booking.yacht) do %>
+          <%= cl_image_tag booking.yacht.photo.key %>
+        <% end %>
       <% else %>
-      <%= link_to yacht_path(booking.yacht) do %>
-      <%= cl_image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid rounded' %>
-      <% end %>
+        <%= link_to yacht_path(booking.yacht) do %>
+          <%= cl_image_tag 'https://res.cloudinary.com/djkohlole/image/upload/v1720208143/istockphoto-1874145863-612x612_a0d1e2.jpg', class: 'img-fluid rounded' %>
+        <% end %>
       <% end %>
       <div class="card-product-infos">
-         <%= link_to yacht_path(booking.yacht), class: 'text-decoration-none text-dark' do %>
-         <h2 class="card-title lobster-regular"><%= booking.yacht.name %></h2>
-         <% end %>
-         <br>
-         <p class="card-text roboto p-1 m-2 icons"><%= truncate(booking.yacht.description, length: 150) %></p>
-         <!-- Icons and Details -->
-         <div class="icons card-text mt-3 roboto d-flex align-items-center">
-            <div class="icons d-flex align-items-center">
-               <%= image_tag 'pound-money.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
-               <strong>£<%= number_to_human(booking.yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</strong>
-            </div>
-            <div class="icons d-flex align-items-center">
-               <%= image_tag 'users.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
-               <strong><%= booking.yacht.capacity %> guests</strong>
-            </div>
-            <br>
-            <div class="icons">
-               <div class="col-6 d-flex align-items-center">
-                  <%= image_tag 'pin.png', style: 'width: 35px; height: 35px; margin-right: 10px;' %>
-                  <strong><%= booking.yacht.location %></strong>
-               </div>
-               <div class="icons d-flex align-items-center">
-                  <%= image_tag 'captain.png', style: 'width: 35px; height: 35px; margin-right: 10px;' %>
-                  <strong><%= booking.yacht.has_captain ? 'Yes' : 'No' %></strong>
-               </div>
-               <br>
-            </div>
+        <%= link_to yacht_path(booking.yacht), class: 'text-decoration-none text-dark' do %>
+          <h2 class="card-title lobster-regular"><%= booking.yacht.name %></h2>
+        <% end %>
+        <br>
+        <p class="card-text roboto p-1 m-2 icons"><%= truncate(booking.yacht.description, length: 150) %></p>
+
+        <!-- Icons and Details -->
+        <div class="icons card-text mt-3 roboto d-flex align-items-center">
+          <div class="icons d-flex align-items-center">
+            <%= image_tag 'pound-money.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
+            <strong>£<%= number_to_human(booking.yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> Total</strong>
+          </div>
+          <div class="icons d-flex align-items-center">
+            <%= image_tag 'users.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
+            <strong><%= booking.yacht.capacity %> guests</strong>
+          </div>
+        </div>
+        <br>
+        <div class="icons">
+          <div class="col-6 d-flex align-items-center">
+            <%= image_tag 'pin.png', style: 'width: 35px; height: 35px; margin-right: 10px;' %>
+            <strong><%= booking.yacht.location %></strong>
+          </div>
+          <div class="icons d-flex align-items-center">
+            <%= image_tag 'captain.png', style: 'width: 35px; height: 35px; margin-right: 10px;' %>
+            <strong><%= booking.yacht.has_captain ? 'Yes' : 'No' %></strong>
+          </div>
+        </div>
+        <br>
+        <!-- Booking Button -->
+
          </div>
          <br>
          <div class="icons d-flex align-items-center">
             <strong><%= booking.start_date.strftime('%d-%m-%Y') %>&nbsp;&nbsp;&nbsp;&nbsp; to</strong>
             <strong><%= booking.end_date.strftime('%d-%m-%Y') %></strong>
+            <strong><%= booking.total_price %> Total Price</strong>
             <%= link_to 'Cancel', booking_path(booking), method: :delete, data: { "turbo-method": :delete, turbo_confirm: 'Are you sure?' } %>
          </div>
       </div>
