@@ -1,0 +1,61 @@
+body {
+  background-image: url("https://www.leonardoyachts.com/wp-content/uploads/2020/10/Eagle-44-daysailer-this-classic-lined-44-foot-sailing-yacht-cuts-through-the-water-like-a-knife-while-sailing-in-comfort-1600x1068.jpg");// no-repeat center center/cover;
+  }
+
+  .frame {
+    background: white;
+    margin: 25px 50px;
+    padding: 35px;
+
+    h2 {
+      color: rgb(1, 47, 93);;
+      text-align: center;
+    }
+    th {
+      color: rgb(1, 47, 93);
+      column-width: auto;
+      white-space: nowrap;
+
+    }
+
+    .table_frame {
+      white-space: normal;
+      padding-right: 10px;
+
+    }
+
+    .description {
+      width: 1000px;
+    }
+    .st {
+      width: 100px;
+
+    }
+    .ed {
+      width: 10px;
+    }
+    .loc {
+
+      width: 10px;
+
+    }
+  th, td {
+    //border: 1px solid;
+    padding: 15px;
+  }
+
+  .rowshadow{
+    box-shadow: 0px 4px 10px rgb(227, 231, 235) ;
+    height: 300px;
+  }
+  .small_box {
+    background: aqua;
+  }
+
+  }
+
+  .table-yatch-image {
+    img {
+      width: 350px;
+    }
+  }
