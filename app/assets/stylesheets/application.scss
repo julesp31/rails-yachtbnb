@@ -14,8 +14,6 @@
 body {
   background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
   background-attachment: fixed;
-  margin-left: 20px;
-  margin-right: 20px;
   padding: 0;
   color: #012F5D;
 }
@@ -109,15 +107,15 @@ body {
   flex-wrap: wrap;
 }
 
-// body {
-//   background: white;
-//   font-family: 'Helvetica', sans-serif;
-// }
 .text-decoration-none {
   text-decoration: none !important; /* Remove underline from links */
 }
 
 .card-product {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   overflow: hidden;
   height: auto; /* Adjust height to fit content */
   background: white;
