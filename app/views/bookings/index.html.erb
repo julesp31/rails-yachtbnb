@@ -25,10 +25,12 @@
 
         <!-- Icons and Details -->
         <div class="icons card-text mt-3 roboto d-flex align-items-center">
-          <div class="icons d-flex align-items-center">
-            <%= image_tag 'pound-money.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
-            <strong>£<%= number_to_human(booking.yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> Total</strong>
-          </div>
+<div class="icons d-flex align-items-center">
+  <%= image_tag 'pound-money.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
+  <strong>£<%= booking.total_price.to_i %> Total</strong>
+</div>
+
+
           <div class="icons d-flex align-items-center">
             <%= image_tag 'users.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
             <strong><%= booking.yacht.capacity %> guests</strong>
@@ -46,10 +48,12 @@
           </div>
         </div>
         <br>
+        <!-- Cancel Button -->
         <div class="position-absolute top-0 end-0 mt-3 me-3">
           <%= link_to 'Cancel', booking_path(booking), method: :delete, class: 'btn btn-sm btn-danger text-white', data: { "turbo-method": :delete, turbo_confirm: 'Are you sure?' } %>
         </div>
         <hr style="border-top: 2px solid indigo; margin-top: 10px; margin-bottom: 10px;">
+        <!-- Booking Dates -->
         <div class="d-flex justify-content-center" style="font-size: 25px; color: indigo;">
           <%= image_tag 'calendar.png', style: 'width: 35px; height: 35px; margin-right: 10px;' %>
           <strong><%= booking.start_date.strftime('%B %e, %Y') %></strong> <!-- Example: January 1, 2023 -->
