@@ -196,7 +196,7 @@
 
 .sub-banner:hover::before {
   transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .sub-banner:hover .sub-banner-content {
@@ -209,7 +209,6 @@
 .footer {
   background-color: rgb(1, 47, 93);
   color: white;
-  padding: 20px 0;
   width: 100%;
 }
 
