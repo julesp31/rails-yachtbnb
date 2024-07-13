@@ -23,7 +23,7 @@
         <div class="icons card-text mt-3 roboto d-flex align-items-center">
           <div class="icons d-flex align-items-center">
             <%= image_tag 'pound-money.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
-            <strong>£<%= number_to_human(booking.yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> per day</strong>
+            <strong>£<%= number_to_human(booking.yacht.price, format: '%n%u', units: { thousand: 'K', million: 'M', billion: 'B' }) %> Total</strong>
           </div>
           <div class="icons d-flex align-items-center">
             <%= image_tag 'users.png', style: 'width: 40px; height: 40px; margin-right: 10px;' %>
@@ -32,6 +32,7 @@
         </div>
             <strong><%= booking.start_date %> start</strong>
             <strong><%= booking.end_date %> end</strong>
+             <strong><%= booking.total_price %> Total Price</strong>
              <%= link_to 'Cancel', booking_path(booking), method: :delete, data: { "turbo-method": :delete, turbo_confirm: 'Are you sure?' } %>
         <br>
         <div class="icons">
@@ -46,8 +47,11 @@
         </div>
         <br>
 
+
+
+
         <!-- Booking Button -->
-        <%= link_to 'Book Now', yacht_path(booking.yacht), class: 'btn btn-info bold-roboto btn-lg', style: 'margin-top: 20px;' %>
+
       </div>
     </div>
   <% end %>
