@@ -12,7 +12,7 @@
 @import "pages/index";
 
 body {
-  background: linear-gradient(to top, #30cfd0 0%, #081b67 100%);;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
   background-attachment: fixed;
   margin-left: 20px;
   margin-right: 20px;
@@ -52,20 +52,20 @@ body {
 }
 
 .container-listing h2 {
-  color: #333;
+  color: indigo;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .container-listing h3 {
-  color: #555;
+  color: rgb(50, 50, 50);
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
 .container-listing h4 {
-  color: #444;
+  color: rgb(70, 70, 70);
   font-size: 18px;
   margin-top: 15px;
   margin-bottom: 10px;
@@ -102,6 +102,13 @@ body {
   max-width: 500px;
 }
 
+.icons {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 // body {
 //   background: white;
 //   font-family: 'Helvetica', sans-serif;
@@ -128,17 +135,14 @@ body {
 
 .card-product img {
   max-width: 700px; /* Ensures the image does not exceed its container */
-  height: auto; /* Maintains aspect ratio */
-  object-fit: cover; /* Covers the container while maintaining aspect ratio */
+  height: 400px; /* Maintains aspect ratio */
+  object-fit: fill; /* Covers the container while maintaining aspect ratio */
 }
 
 .card-product-infos h2 {
   text-align: center;
 }
 
-.card-product-infos {
-  padding: 20px;
-}
 
 .card-product h3 {
   font-size: 16px;
@@ -147,10 +151,8 @@ body {
 }
 
 .card-product p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 0;
-  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
   color: #012F5D;
 }
 
@@ -160,6 +162,34 @@ body {
 
 .text-dark {
   color: #012F5D;
+}
+
+.card-product {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-product img {
+  max-width: 700px;
+  height: 400px;
+}
+
+.card-product-infos {
+  width: 100%;
+  text-align: center;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-text {
+  margin-bottom: 5px;
 }
 
 
@@ -174,7 +204,6 @@ body {
 @media (min-width: 576px) {
   .cards_grid {
     grid-template-columns: repeat(auto-fill, minmax(1fr));
-    gap: 20px;
     flex-direction: column;
   }
 }
