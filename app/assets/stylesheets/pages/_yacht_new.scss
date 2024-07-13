@@ -46,10 +46,6 @@
   }
 }
 
-.btn {
-background-color: rgb(1, 47, 93);
-border-radius: 6px;
-}
 .cardinside {
   display: flex;
   flex-direction: row;
@@ -78,6 +74,7 @@ border-radius: 6px;
   padding: 40px;
 }
 
+.card-form .form-inputs
 
 .card-form .form-actions {
 margin-bottom: 20px;
@@ -85,5 +82,4 @@ margin-bottom: 20px;
 
   .card-form .form-actions {
   text-align: right;
-
 }

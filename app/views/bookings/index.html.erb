@@ -1,48 +1,34 @@
+<h2>My Bookings</h2>
 
-
-<div class="frame">
-
- <h2>My Bookings</h2>
-
-
-
-
-    <% if @bookings.any? %>
-        <div class="table_frame" >
-            <table>
-              <thead>
-                <tr>
-                  <th>Yacht Image</th>
-                  <th>Yacht Name</th>
-                  <th class="description">Description</th>
-                  <div class="small_box">
-                    <th>Price</th>
-                    <th class="loc">Location</th>
-                    <th class="sd">Start Date</th>
-                    <th class="ed">End Date</th>
-                    <th>Actions</th>
-                  </div>
-                </tr>
-              </thead>
-              <tbody>
-                <% @bookings.each do |booking| %>
-                  <tr class="rowshadow">
-                    <td><%= booking.yacht.photo %></td>
-                    <td><%= booking.yacht.name %></td>
-                    <td class="description"><%= booking.yacht.description %></td>                    <td><%= number_to_currency(booking.yacht.price) %></td>
-                      <div class="small_box">
-                        <td class="loc"><%= booking.yacht.location %></td>
-                        <td class="st"><%= booking.start_date %></td>
-                        <td class="ed"><%= booking.end_date %></td>
-                        <td> <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?' } %> </td>
-                      </div>
-                  </tr>
-                <% end %>
-                </tbody>
-            </table>
-          </div>
-    <% else %>
-      <p>You have no bookings.</p>
-    <% end %>
-
-</div>
+<% if @bookings.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Yacht Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Location</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td><%= booking.yacht.name %></td>
+          <td><%= booking.yacht.description %></td>
+          <td><%= number_to_currency(booking.yacht.price) %></td>
+          <td><%= booking.yacht.location %></td>
+          <td><%= booking.start_date %></td>
+          <td><%= booking.end_date %></td>
+          <td>
+            <%= link_to 'Cancel', booking, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>You have no bookings.</p>
+<% end %>
